@@ -301,3 +301,6 @@ Every numeric claim re-derived from the artefacts. Four further defects found an
 
 ## Author block filled (2026-09-15)
 Tanvir Ahmed, North South University, Dhaka, Bangladesh, tanvir.ahmed32@northsouth.edu. Set in paper/main.tex frontmatter and CRediT and in paper/highlights.tex; both rebuilt. Remaining before submission: repository URL in Data availability, and a read of the live guide for authors.
+
+## SUBMITTED (2026-09-15, 12:31)
+Image and Vision Computing, Full Length Article. main.pdf, abstract.pdf, highlights.pdf, graphical_abstract.pdf. Subscription route, no funding, SSRN preprint opted in (posts after desk review). Outstanding: deposit the 3 GB of derived labels, checkpoints and predictions and add the link to the repo README before the preprint goes live.

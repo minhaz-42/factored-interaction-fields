@@ -30,6 +30,11 @@ of the five precision-fusion runs. The advantage does not transfer to HOT3D in a
 cross-dataset settings. The geometric branch is therefore best understood as a structured auxiliary
 task that can be dropped at deployment, not as a better estimator.
 
+## Project record
+
+[PROJECT.md](PROJECT.md) documents what the project is, what it found, how it was built, where it
+was submitted and what is still outstanding.
+
 ## Layout
 
 ```
