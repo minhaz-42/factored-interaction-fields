@@ -1,0 +1,64 @@
+% Image and Vision Computing (Elsevier) submission. Compile: latexmk -pdf main.tex
+% Class options: [preprint,12pt] for a single-column review copy; [final,5p,times,twocolumn] for the journal layout.
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+\usepackage{graphicx,amsmath,amssymb,booktabs,multirow,xcolor,subcaption}
+\usepackage[colorlinks,allcolors=black,breaklinks]{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage{microtype}
+\usepackage{dblfloatfix}
+% float placement: allow up to three floats per page and keep them close to the text that cites them
+\setcounter{topnumber}{3}\setcounter{bottomnumber}{2}\setcounter{totalnumber}{4}\setcounter{dbltopnumber}{2}
+\renewcommand{\topfraction}{0.92}\renewcommand{\bottomfraction}{0.6}\renewcommand{\dbltopfraction}{0.92}
+\renewcommand{\textfraction}{0.07}\renewcommand{\floatpagefraction}{0.85}\renewcommand{\dblfloatpagefraction}{0.85}
+\input{macros}
+\journal{Image and Vision Computing}
+
+\begin{document}
+\begin{frontmatter}
+\title{\PaperTitle}
+\author[a]{Tanvir Ahmed\corref{cor1}}
+\ead{tanvir.ahmed32@northsouth.edu}
+\affiliation[a]{organization={North South University}, city={Dhaka}, country={Bangladesh}}
+\cortext[cor1]{Corresponding author.}
+
+\input{sec/0_abstract}
+
+% The graphical abstract and the highlights are submitted to Elsevier as separate files and are
+% therefore not typeset here: figures/graphical_abstract.pdf and paper/highlights.tex.
+
+\begin{keyword}
+hand-object interaction \sep interaction field \sep egocentric vision \sep 3D hand pose \sep 6-DoF object pose \sep uncertainty-weighted fusion
+\end{keyword}
+\end{frontmatter}
+
+\input{sec/1_intro}
+\input{sec/2_related}
+\input{sec/3_formulation}
+\input{sec/4_method}
+\input{sec/5_setup}
+\input{sec/6_results}
+\input{sec/7_ablations}
+\input{sec/8_cross_dataset}
+\input{sec/10_failure}
+\input{sec/11_discussion}
+\input{sec/12_limitations}
+\input{sec/13_conclusion}
+
+\section*{CRediT authorship contribution statement}
+\textbf{Tanvir Ahmed:} Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Data curation, Writing (original draft, review and editing), Visualization.
+
+\section*{Declaration of competing interest}
+The author declares no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Declaration of generative AI in the writing process}
+During the preparation of this work the author used an AI assistant to help draft and edit text and to write analysis and plotting code. The author reviewed and edited all content and takes full responsibility for the publication.
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\section*{Data availability}
+SHOW3D and HOT3D are public datasets released by their authors under their respective licences (CC BY-NC 4.0 and CC BY-SA / CC BY-NC-SA). The code, configurations, derived labels, the HOT3D-IF build and evaluation protocol, all trained checkpoints, per-frame predictions in the official line-delimited JSON schema, and the scripts that generate every table and figure in this paper from those artefacts are released at the project repository.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{refs}
+\end{document}

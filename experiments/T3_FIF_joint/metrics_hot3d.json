@@ -1,0 +1,333 @@
+{
+ "official": {
+  "left_to_object": {
+   "num_samples": 445,
+   "missing": 0,
+   "ade_mm": 37.89869208345667,
+   "recall": 1.0,
+   "acc@10mm": 0.15152487961476727,
+   "acc@50mm": 0.8097378277153559,
+   "acc@100mm": 0.9362225789192081
+  },
+  "right_to_object": {
+   "num_samples": 393,
+   "missing": 0,
+   "ade_mm": 35.51431625932253,
+   "recall": 1.0,
+   "acc@10mm": 0.18999151823579305,
+   "acc@50mm": 0.8023748939779474,
+   "acc@100mm": 0.9286320126014782
+  },
+  "mean_ade_mm": 36.7065041713896,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.17075819892528016,
+  "mean_acc@50mm": 0.8060563608466516,
+  "mean_acc@100mm": 0.9324272957603432
+ },
+ "stratified": {
+  "magnitude": {
+   "far(>60)": {
+    "ade_mm": 75.58210074258406,
+    "n": 5078
+   },
+   "mid(15-60)": {
+    "ade_mm": 24.54004215000878,
+    "n": 8485
+   },
+   "near(<15)": {
+    "ade_mm": 13.68891310890331,
+    "n": 4035
+   }
+  },
+  "visibility0": {
+   "occluded_or_outside": {
+    "ade_mm": 38.934243667657746,
+    "n": 3387
+   },
+   "visible": {
+    "ade_mm": 36.26716250128312,
+    "n": 14211
+   }
+  },
+  "object_fov0": {
+   "in_view": {
+    "ade_mm": 32.5164652551472,
+    "n": 16527
+   },
+   "out_of_view": {
+    "ade_mm": 186.06570900792198,
+    "n": 126
+   },
+   "partial": {
+    "ade_mm": 91.44870793785744,
+    "n": 945
+   }
+  },
+  "hand_fov0": {
+   "in_view": {
+    "ade_mm": 32.87761366785044,
+    "n": 16422
+   },
+   "out_of_view": {
+    "ade_mm": 143.10357352217054,
+    "n": 483
+   },
+   "partial": {
+    "ade_mm": 55.16267235706062,
+    "n": 693
+   }
+  },
+  "hand": {
+   "left": {
+    "ade_mm": 37.898692083456666,
+    "n": 9345
+   },
+   "right": {
+    "ade_mm": 35.51431625932251,
+    "n": 8253
+   }
+  },
+  "joint_group": {
+   "distal": {
+    "ade_mm": 32.2636594232821,
+    "n": 3352
+   },
+   "fingertips": {
+    "ade_mm": 31.5702150767021,
+    "n": 4190
+   },
+   "intermediate": {
+    "ade_mm": 36.81143309162163,
+    "n": 3352
+   },
+   "palm": {
+    "ade_mm": 40.057982107691494,
+    "n": 838
+   },
+   "proximal": {
+    "ade_mm": 41.95166614328827,
+    "n": 3352
+   },
+   "thumb": {
+    "ade_mm": 39.884872224830225,
+    "n": 1676
+   },
+   "wrist": {
+    "ade_mm": 50.60429422361445,
+    "n": 838
+   }
+  },
+  "object": {
+   "aria": {
+    "ade_mm": 84.97418339376617,
+    "n": 105
+   },
+   "balandabowl": {
+    "ade_mm": 44.734640561674524,
+    "n": 2520
+   },
+   "birdhousetoy": {
+    "ade_mm": 24.926392668170408,
+    "n": 1050
+   },
+   "brushholder": {
+    "ade_mm": 44.58227040680287,
+    "n": 1197
+   },
+   "canparmesan": {
+    "ade_mm": 25.146284921486682,
+    "n": 336
+   },
+   "cansoup": {
+    "ade_mm": 23.588021816415058,
+    "n": 966
+   },
+   "cantomatosauce": {
+    "ade_mm": 70.12420201932309,
+    "n": 462
+   },
+   "dumbbell": {
+    "ade_mm": 67.3435134425009,
+    "n": 63
+   },
+   "keyboard": {
+    "ade_mm": 30.463342491922187,
+    "n": 4515
+   },
+   "milk": {
+    "ade_mm": 86.92751900372299,
+    "n": 441
+   },
+   "mouse": {
+    "ade_mm": 51.45529475791746,
+    "n": 378
+   },
+   "mug": {
+    "ade_mm": 61.5347592181148,
+    "n": 777
+   },
+   "mug2": {
+    "ade_mm": 22.170518141942356,
+    "n": 84
+   },
+   "mustard": {
+    "ade_mm": 88.81925223292852,
+    "n": 63
+   },
+   "orangejuice": {
+    "ade_mm": 23.80191353963955,
+    "n": 2163
+   },
+   "vase": {
+    "ade_mm": 28.287218586844748,
+    "n": 1575
+   },
+   "vegetables": {
+    "ade_mm": 19.919122113138886,
+    "n": 378
+   },
+   "waffles": {
+    "ade_mm": 45.77817766323658,
+    "n": 525
+   }
+  },
+  "subject": {
+   "P0017": {
+    "ade_mm": 42.73206233790576,
+    "n": 6216
+   },
+   "P0018": {
+    "ade_mm": 37.54418226985579,
+    "n": 5334
+   },
+   "P0021": {
+    "ade_mm": 29.990039994751683,
+    "n": 6048
+   }
+  },
+  "along_ray_vs_lateral": {
+   "mean_err_par_mm": 20.772251591469523,
+   "mean_err_lat_mm": 27.312421938219803
+  },
+  "direction_err_deg_mag>20": 30.775739344738533,
+  "magnitude_err_mm": 24.043160236999302
+ },
+ "surface_distance_vertex": {
+  "surface_distance_mm": 27.15895367869889,
+  "penetration_rate": null,
+  "n": 17598,
+  "mode": "vertex"
+ },
+ "official_geo_head": {
+  "left_to_object": {
+   "num_samples": 445,
+   "missing": 0,
+   "ade_mm": 57.96395608113325,
+   "recall": 1.0,
+   "acc@10mm": 0.04922418405564473,
+   "acc@50mm": 0.5710005350454789,
+   "acc@100mm": 0.8794007490636704
+  },
+  "right_to_object": {
+   "num_samples": 393,
+   "missing": 0,
+   "ade_mm": 48.32803098490417,
+   "recall": 1.0,
+   "acc@10mm": 0.05670665212649945,
+   "acc@50mm": 0.6545498606567309,
+   "acc@100mm": 0.9197867442142251
+  },
+  "mean_ade_mm": 53.14599353301871,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.052965418091072095,
+  "mean_acc@50mm": 0.6127751978511049,
+  "mean_acc@100mm": 0.8995937466389478
+ },
+ "official_dir_head": {
+  "left_to_object": {
+   "num_samples": 445,
+   "missing": 0,
+   "ade_mm": 37.648870151957404,
+   "recall": 1.0,
+   "acc@10mm": 0.15227394328517924,
+   "acc@50mm": 0.8141252006420546,
+   "acc@100mm": 0.9341894060995185
+  },
+  "right_to_object": {
+   "num_samples": 393,
+   "missing": 0,
+   "ade_mm": 35.83244084690683,
+   "recall": 1.0,
+   "acc@10mm": 0.18671998061311038,
+   "acc@50mm": 0.7954683145522841,
+   "acc@100mm": 0.925845147219193
+  },
+  "mean_ade_mm": 36.740655499432116,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.16949696194914482,
+  "mean_acc@50mm": 0.8047967575971693,
+  "mean_acc@100mm": 0.9300172766593557
+ },
+ "oracle_hand_pred_obj_gt": {
+  "left_to_object": {
+   "num_samples": 445,
+   "missing": 0,
+   "ade_mm": 40.57068224318596,
+   "recall": 1.0,
+   "acc@10mm": 0.1032637774210808,
+   "acc@50mm": 0.739218833600856,
+   "acc@100mm": 0.9341894060995185
+  },
+  "right_to_object": {
+   "num_samples": 393,
+   "missing": 0,
+   "ade_mm": 36.200597131146566,
+   "recall": 1.0,
+   "acc@10mm": 0.10444686780564644,
+   "acc@50mm": 0.7991033563552647,
+   "acc@100mm": 0.9746758754392342
+  },
+  "mean_ade_mm": 38.38563968716626,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.10385532261336361,
+  "mean_acc@50mm": 0.7691610949780604,
+  "mean_acc@100mm": 0.9544326407693764
+ },
+ "oracle_hand_gt_obj_pred": {
+  "left_to_object": {
+   "num_samples": 445,
+   "missing": 0,
+   "ade_mm": 65.26493500981758,
+   "recall": 1.0,
+   "acc@10mm": 0.05436062065275549,
+   "acc@50mm": 0.5234884965222044,
+   "acc@100mm": 0.8377742108079187
+  },
+  "right_to_object": {
+   "num_samples": 393,
+   "missing": 0,
+   "ade_mm": 54.86971369518492,
+   "recall": 1.0,
+   "acc@10mm": 0.05367745062401551,
+   "acc@50mm": 0.5750636132315522,
+   "acc@100mm": 0.9050042408821035
+  },
+  "mean_ade_mm": 60.067324352501245,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.0540190356383855,
+  "mean_acc@50mm": 0.5492760548768783,
+  "mean_acc@100mm": 0.8713892258450111
+ },
+ "surface_distance_vertex_geo_head": {
+  "surface_distance_mm": 32.636867948014164,
+  "penetration_rate": null,
+  "n": 17598,
+  "mode": "vertex"
+ },
+ "surface_distance_vertex_dir_head": {
+  "surface_distance_mm": 27.018767585802344,
+  "penetration_rate": null,
+  "n": 17598,
+  "mode": "vertex"
+ }
+}

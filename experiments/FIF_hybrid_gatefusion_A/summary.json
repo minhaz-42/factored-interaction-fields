@@ -1,0 +1,34 @@
+{
+ "best_val_ade_mm": 44.4878874943813,
+ "epochs_run": 10,
+ "early_stopped": false,
+ "final": {
+  "left_to_object": {
+   "num_samples": 5079,
+   "missing": 0,
+   "ade_mm": 43.553376061249025,
+   "recall": 1.0,
+   "acc@10mm": 0.21671870165668158,
+   "acc@50mm": 0.7873690921534985,
+   "acc@100mm": 0.9293730486878744
+  },
+  "right_to_object": {
+   "num_samples": 4959,
+   "missing": 0,
+   "ade_mm": 45.422398927513576,
+   "recall": 1.0,
+   "acc@10mm": 0.2049568365357839,
+   "acc@50mm": 0.7770863941462852,
+   "acc@100mm": 0.918243885576009
+  },
+  "mean_ade_mm": 44.4878874943813,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.21083776909623275,
+  "mean_acc@50mm": 0.7822277431498919,
+  "mean_acc@100mm": 0.9238084671319418
+ },
+ "train_time_s": 8444.527698993683,
+ "inference_s_per_frame_incl_metrics": 0.021203526281489735,
+ "peak_mem_gb": 5.589450752,
+ "params_trainable": 15363108
+}

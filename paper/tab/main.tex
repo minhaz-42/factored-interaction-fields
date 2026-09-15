@@ -1,0 +1,20 @@
+\begin{tabular}{@{}llrrrrrrrr@{}}
+\toprule
+ & & \multicolumn{5}{c}{Fold A (XYZ109, LYA722)} & \multicolumn{3}{c}{Fold B (MHA016, MMO925)} \\
+\cmidrule(lr){3-7}\cmidrule(lr){8-10}
+Method & Views & ADE & acc@10 & acc@50 & acc@100 & SD & ADE & acc@50 & SD \\
+\midrule
+Zero-vector predictor & -- & 82.6 & -- & -- & -- & -- & -- & -- & -- \\
+Training-mean predictor & -- & 94.2 & -- & -- & -- & -- & -- & -- & -- \\
+Hand-crop oracle box, InterField~\cite{rim2026show3dapi} & h0 & 54.7 & -- & -- & -- & -- & -- & -- & -- \\
+InterField ResNet-50, official~\cite{rim2026show3dapi} & h0 & 60.47 & 0.150 & 0.682 & 0.861 & -- & -- & -- & -- \\
+\midrule
+Direct regression (B2) & h0 & 49.58 & 0.213 & 0.742 & 0.898 & 35.75 & -- & -- & -- \\
+Direct, stereo, no ray encoding (B3b) & h0+h1 & 47.47 & 0.205 & 0.754 & 0.908 & 34.78 & -- & -- & -- \\
+Direct, stereo + Pl\"ucker rays (B3) & h0+h1 & 46.15 / 45.73 & 0.227 & 0.756 & 0.912 & 33.22 & 35.68 & 0.794 & 23.61 \\
+\midrule
+FIF, geometric head only & h0+h1 & 55.11 & 0.097 & 0.689 & 0.896 & 44.11 & -- & -- & -- \\
+FIF, single view & h0 & 45.19 & 0.219 & 0.783 & 0.918 & 33.32 & -- & -- & -- \\
+\textbf{FIF (full)} & h0+h1 & \textbf{44.43 / 43.82} & \textbf{0.211} & \textbf{0.768} & \textbf{0.921} & \textbf{31.19} & \textbf{34.08} & \textbf{0.807} & \textbf{22.75} \\
+\bottomrule
+\end{tabular}

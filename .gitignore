@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------- datasets and caches
+# SHOW3D and HOT3D are redistributed by their own authors, not here.
+data/
+third_party/
+
+# ---------------------------------------------------------------- large run artefacts
+# Checkpoints, per-frame predictions and uncertainty dumps (~2.4 GB) are archived
+# separately; the small metrics files that every table is built from are committed.
+experiments/**/*.pt
+experiments/**/*.jsonl
+experiments/**/*.npz
+
+# ---------------------------------------------------------------- environments
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------- LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.spl
+*.synctex.gz
+*.toc
+texput.*
+paper/attic/
+paper/fig/*.aux
+paper/fig/*.log
+paper/fig/*_preview*.png
+
+# ---------------------------------------------------------------- os
+.DS_Store

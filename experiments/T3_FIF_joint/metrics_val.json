@@ -1,0 +1,293 @@
+{
+ "official": {
+  "left_to_object": {
+   "num_samples": 5079,
+   "missing": 0,
+   "ade_mm": 45.537076818096786,
+   "recall": 1.0,
+   "acc@10mm": 0.21275279160689675,
+   "acc@50mm": 0.7669207474287214,
+   "acc@100mm": 0.9228382039959122
+  },
+  "right_to_object": {
+   "num_samples": 4959,
+   "missing": 0,
+   "ade_mm": 46.782663112836445,
+   "recall": 1.0,
+   "acc@10mm": 0.19830226908266835,
+   "acc@50mm": 0.7641709638079874,
+   "acc@100mm": 0.9186952054465666
+  },
+  "mean_ade_mm": 46.15986996546661,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.20552753034478255,
+  "mean_acc@50mm": 0.7655458556183544,
+  "mean_acc@100mm": 0.9207667047212393
+ },
+ "stratified": {
+  "magnitude": {
+   "far(>60)": {
+    "ade_mm": 95.44795433938394,
+    "n": 68057
+   },
+   "mid(15-60)": {
+    "ade_mm": 28.19541508184824,
+    "n": 82383
+   },
+   "near(<15)": {
+    "ade_mm": 15.078606333637921,
+    "n": 60358
+   }
+  },
+  "visibility0": {
+   "occluded_or_outside": {
+    "ade_mm": 49.03778737729341,
+    "n": 52743
+   },
+   "visible": {
+    "ade_mm": 45.18957837846629,
+    "n": 158055
+   }
+  },
+  "object_fov0": {
+   "in_view": {
+    "ade_mm": 41.998972546076715,
+    "n": 202944
+   },
+   "out_of_view": {
+    "ade_mm": 455.8317184637137,
+    "n": 1218
+   },
+   "partial": {
+    "ade_mm": 97.98015563129576,
+    "n": 6636
+   }
+  },
+  "hand_fov0": {
+   "in_view": {
+    "ade_mm": 38.57207725954176,
+    "n": 195930
+   },
+   "out_of_view": {
+    "ade_mm": 238.49344116539785,
+    "n": 6657
+   },
+   "partial": {
+    "ade_mm": 71.09498172561258,
+    "n": 8211
+   }
+  },
+  "hand": {
+   "left": {
+    "ade_mm": 45.53707681809687,
+    "n": 106659
+   },
+   "right": {
+    "ade_mm": 46.78266311283648,
+    "n": 104139
+   }
+  },
+  "joint_group": {
+   "distal": {
+    "ade_mm": 43.51647847942747,
+    "n": 40152
+   },
+   "fingertips": {
+    "ade_mm": 43.70719260438357,
+    "n": 50190
+   },
+   "intermediate": {
+    "ade_mm": 46.225113978913946,
+    "n": 40152
+   },
+   "palm": {
+    "ade_mm": 45.73174765705878,
+    "n": 10038
+   },
+   "proximal": {
+    "ade_mm": 49.20834810006643,
+    "n": 40152
+   },
+   "thumb": {
+    "ade_mm": 44.1430472898397,
+    "n": 20076
+   },
+   "wrist": {
+    "ade_mm": 60.847352038403265,
+    "n": 10038
+   }
+  },
+  "object": {
+   "birdhousetoy": {
+    "ade_mm": 43.901131854202475,
+    "n": 22806
+   },
+   "brushholder": {
+    "ade_mm": 31.07896108099235,
+    "n": 27657
+   },
+   "dinotoy": {
+    "ade_mm": 40.4070060916569,
+    "n": 29022
+   },
+   "dumbbell": {
+    "ade_mm": 66.46490567598185,
+    "n": 35427
+   },
+   "milk": {
+    "ade_mm": 36.76685912550231,
+    "n": 32256
+   },
+   "mouse": {
+    "ade_mm": 146.14471381491015,
+    "n": 11130
+   },
+   "mug": {
+    "ade_mm": 29.986455823388496,
+    "n": 11382
+   },
+   "orangejuice": {
+    "ade_mm": 47.55461858780909,
+    "n": 7980
+   },
+   "vase": {
+    "ade_mm": 24.364785960690874,
+    "n": 33138
+   }
+  },
+  "subject": {
+   "LYA722": {
+    "ade_mm": 40.61673409956039,
+    "n": 92064
+   },
+   "XYZ109": {
+    "ade_mm": 50.4446899970282,
+    "n": 118734
+   }
+  },
+  "along_ray_vs_lateral": {
+   "mean_err_par_mm": 22.210348602053976,
+   "mean_err_lat_mm": 36.74583981573677
+  },
+  "direction_err_deg_mag>20": 30.996881537561762,
+  "magnitude_err_mm": 29.65936481051599
+ },
+ "surface_distance_vertex": {
+  "surface_distance_mm": 32.70509209301151,
+  "penetration_rate": null,
+  "n": 210798,
+  "mode": "vertex"
+ },
+ "official_geo_head": {
+  "left_to_object": {
+   "num_samples": 5079,
+   "missing": 0,
+   "ade_mm": 62.219994401654226,
+   "recall": 1.0,
+   "acc@10mm": 0.07264272119558593,
+   "acc@50mm": 0.6031746031746031,
+   "acc@100mm": 0.8639495963772396
+  },
+  "right_to_object": {
+   "num_samples": 4959,
+   "missing": 0,
+   "ade_mm": 62.541670050636576,
+   "recall": 1.0,
+   "acc@10mm": 0.0732578572868954,
+   "acc@50mm": 0.6120377572283199,
+   "acc@100mm": 0.864460000576153
+  },
+  "mean_ade_mm": 62.3808322261454,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.07295028924124067,
+  "mean_acc@50mm": 0.6076061802014615,
+  "mean_acc@100mm": 0.8642047984766963
+ },
+ "official_dir_head": {
+  "left_to_object": {
+   "num_samples": 5079,
+   "missing": 0,
+   "ade_mm": 45.217535310768824,
+   "recall": 1.0,
+   "acc@10mm": 0.21475918581648057,
+   "acc@50mm": 0.7693209199411207,
+   "acc@100mm": 0.9232132309509746
+  },
+  "right_to_object": {
+   "num_samples": 4959,
+   "missing": 0,
+   "ade_mm": 46.769085730358334,
+   "recall": 1.0,
+   "acc@10mm": 0.1992433190255332,
+   "acc@50mm": 0.7627113761415032,
+   "acc@100mm": 0.9186856028961292
+  },
+  "mean_ade_mm": 45.99331052056358,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.20700125242100686,
+  "mean_acc@50mm": 0.7660161480413119,
+  "mean_acc@100mm": 0.9209494169235519
+ },
+ "oracle_hand_pred_obj_gt": {
+  "left_to_object": {
+   "num_samples": 5079,
+   "missing": 0,
+   "ade_mm": 49.39502702426635,
+   "recall": 1.0,
+   "acc@10mm": 0.10913284392315697,
+   "acc@50mm": 0.6921309969154033,
+   "acc@100mm": 0.9113342521493732
+  },
+  "right_to_object": {
+   "num_samples": 4959,
+   "missing": 0,
+   "ade_mm": 45.85691447671267,
+   "recall": 1.0,
+   "acc@10mm": 0.12186596760099483,
+   "acc@50mm": 0.7417586110871047,
+   "acc@100mm": 0.9134330078068735
+  },
+  "mean_ade_mm": 47.62597075048951,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.1154994057620759,
+  "mean_acc@50mm": 0.716944804001254,
+  "mean_acc@100mm": 0.9123836299781234
+ },
+ "oracle_hand_gt_obj_pred": {
+  "left_to_object": {
+   "num_samples": 5079,
+   "missing": 0,
+   "ade_mm": 52.9739795483599,
+   "recall": 1.0,
+   "acc@10mm": 0.07409595064645272,
+   "acc@50mm": 0.6269138094300528,
+   "acc@100mm": 0.896276919903618
+  },
+  "right_to_object": {
+   "num_samples": 4959,
+   "missing": 0,
+   "ade_mm": 56.59135912051037,
+   "recall": 1.0,
+   "acc@10mm": 0.07069397632011062,
+   "acc@50mm": 0.585938025139477,
+   "acc@100mm": 0.8777403278310719
+  },
+  "mean_ade_mm": 54.782669334435134,
+  "mean_recall": 1.0,
+  "mean_acc@10mm": 0.07239496348328167,
+  "mean_acc@50mm": 0.6064259172847649,
+  "mean_acc@100mm": 0.8870086238673449
+ },
+ "surface_distance_vertex_geo_head": {
+  "surface_distance_mm": 38.8449459000635,
+  "penetration_rate": null,
+  "n": 210798,
+  "mode": "vertex"
+ },
+ "surface_distance_vertex_dir_head": {
+  "surface_distance_mm": 32.917429010178836,
+  "penetration_rate": null,
+  "n": 210798,
+  "mode": "vertex"
+ }
+}

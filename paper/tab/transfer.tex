@@ -1,0 +1,18 @@
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+ & & \multicolumn{2}{c}{SHOW3D fold A} & \multicolumn{3}{c}{HOT3D-IF eval} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-7}
+Training data & Model & ADE & acc@50 & ADE & acc@10 & acc@50 \\
+\midrule
+SHOW3D (37,645 frames) & Direct, single view (B2) & 49.58 & 0.742 & 38.98 & 0.202 & 0.787 \\
+ & Direct, stereo (B3) & 46.15 & 0.756 & 40.18 & 0.201 & 0.777 \\
+ & FIF, geometric head only & 55.11 & 0.689 & 50.32 & 0.072 & 0.665 \\
+ & FIF (full) & 44.43 & 0.768 & 43.91 & 0.183 & 0.763 \\
+\midrule
+HOT3D-train (2,889 frames) & Direct, stereo & 78.13 & 0.671 & 42.63 & 0.087 & 0.750 \\
+ & FIF (full) & 79.59 & 0.661 & 43.32 & 0.082 & 0.748 \\
+\midrule
+SHOW3D + HOT3D-train (40,534) & Direct, stereo & 46.20 & 0.760 & 34.54 & 0.221 & 0.818 \\
+ & FIF (full) & 46.16 & 0.766 & 36.71 & 0.171 & 0.806 \\
+\bottomrule
+\end{tabular}

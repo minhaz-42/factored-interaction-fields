@@ -1,0 +1,3150 @@
+[
+ {
+  "run": "B1_interfield_A",
+  "model": "InterField ResNet-50 (official)",
+  "views": "h0",
+  "fold": "A",
+  "mean_ade_mm": 60.47,
+  "left_to_object.ade_mm": 60.27,
+  "right_to_object.ade_mm": 60.68,
+  "mean_acc@10mm": 0.15,
+  "mean_acc@50mm": 0.682,
+  "mean_acc@100mm": 0.861,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "-",
+  "params_M": "24.9",
+  "train_h": "official",
+  "stratified": null,
+  "oracles": null,
+  "source": "official RESULTS.md"
+ },
+ {
+  "run": "B2_direct_mono_A",
+  "model": "direct/precision/rays=False",
+  "views": "h0",
+  "fold": "A",
+  "mean_ade_mm": 49.57971472294324,
+  "left_to_object.ade_mm": 47.71290002050055,
+  "right_to_object.ade_mm": 51.446529425385926,
+  "mean_acc@10mm": 0.2129263493399795,
+  "mean_acc@50mm": 0.7416905537907679,
+  "mean_acc@100mm": 0.8975497427852219,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "35.75",
+  "params_M": "14.9",
+  "train_h": "1.1",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 104.80865100600307,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 29.093045937913402,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 15.190456378576666,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 54.345378744120715,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 47.95964708497449,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 45.696454559153516,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 451.66908283025975,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 93.82852835694588,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 40.61157255009778,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 267.1627348242005,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 86.59999947039819,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 47.71290002050049,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 51.44652942538568,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 47.217023450685,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 47.27960718888954,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 49.73246115796936,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 48.86550901173301,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 52.50991724867538,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 47.31620267376923,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 62.971795038111615,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 40.50903543689896,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 31.981894321596585,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 47.430274977614125,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 77.77688137865341,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 38.85249666268697,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 140.33629439693667,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 33.30602028679694,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 53.06510391799286,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 26.81475223396625,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 43.198819996865765,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 54.48771343444466,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 23.430077584278145,
+    "mean_err_lat_mm": 39.76995376444674
+   },
+   "direction_err_deg_mag>20": 31.642244130176188,
+   "magnitude_err_mm": 33.2246789855589
+  },
+  "oracles": {}
+ },
+ {
+  "run": "B3_direct_stereo_rays_A",
+  "model": "direct/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 46.15399768066343,
+  "left_to_object.ade_mm": 45.75960330233489,
+  "right_to_object.ade_mm": 46.54839205899197,
+  "mean_acc@10mm": 0.2270697036884916,
+  "mean_acc@50mm": 0.7562998813997106,
+  "mean_acc@100mm": 0.9121321061149092,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "33.22",
+  "params_M": "15.1",
+  "train_h": "2.2",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 95.86778101703601,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 28.210513508352015,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 14.573647606284355,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 49.03111586232843,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 45.18761434518558,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 41.96928978190176,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 460.32841451480573,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 97.96277499665338,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 38.33609951728068,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 241.36347092863235,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 74.31834427747972,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 45.759603302334824,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 46.548392058991965,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 43.893839548876485,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 44.16395550328047,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 46.12929853412506,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 45.02903481196243,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 48.56821158643133,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 44.35192135295955,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 60.216886440913065,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 45.06510306637723,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 32.18808290548708,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 39.3210876089816,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 67.90613964863962,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 36.765386448806126,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 136.3099450464019,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 32.05633468781796,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 46.56771064376222,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 24.859648737790753,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 40.476689926025124,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 50.5476994618687,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 22.285278249640736,
+    "mean_err_lat_mm": 36.64551708825513
+   },
+   "direction_err_deg_mag>20": 30.530679108181218,
+   "magnitude_err_mm": 31.068782570031132
+  },
+  "oracles": {}
+ },
+ {
+  "run": "B3_direct_stereo_rays_B",
+  "model": "direct/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "B",
+  "mean_ade_mm": 35.67977374961011,
+  "left_to_object.ade_mm": 39.767459140337905,
+  "right_to_object.ade_mm": 31.59208835888232,
+  "mean_acc@10mm": 0.25475047039545917,
+  "mean_acc@50mm": 0.7935120941606197,
+  "mean_acc@100mm": 0.9197286024002344,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "23.61",
+  "params_M": "15.1",
+  "train_h": "2.1",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 76.03654866567294,
+     "n": 89898
+    },
+    "mid(15-60)": {
+     "ade_mm": 20.05424149376566,
+     "n": 109280
+    },
+    "near(<15)": {
+     "ade_mm": 9.71570763579928,
+     "n": 81361
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 22.419356774782567,
+     "n": 59760
+    },
+    "visible": {
+     "ade_mm": 38.399304691481696,
+     "n": 220779
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 34.08986409141033,
+     "n": 269955
+    },
+    "out_of_view": {
+     "ade_mm": 225.525044575249,
+     "n": 903
+    },
+    "partial": {
+     "ade_mm": 42.4710748159812,
+     "n": 9681
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 32.858516359871686,
+     "n": 268296
+    },
+    "out_of_view": {
+     "ade_mm": 140.06482443702748,
+     "n": 3591
+    },
+    "partial": {
+     "ade_mm": 57.646736188181166,
+     "n": 8652
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 39.76745914033789,
+     "n": 116781
+    },
+    "right": {
+     "ade_mm": 31.592088358882265,
+     "n": 163758
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 33.1825595936006,
+     "n": 53436
+    },
+    "fingertips": {
+     "ade_mm": 33.07870254334038,
+     "n": 66795
+    },
+    "intermediate": {
+     "ade_mm": 35.06199122358686,
+     "n": 53436
+    },
+    "palm": {
+     "ade_mm": 35.380294003337504,
+     "n": 13359
+    },
+    "proximal": {
+     "ade_mm": 37.31735898375079,
+     "n": 53436
+    },
+    "thumb": {
+     "ade_mm": 33.31935008521647,
+     "n": 26718
+    },
+    "wrist": {
+     "ade_mm": 45.2407335630576,
+     "n": 13359
+    }
+   },
+   "object": {
+    "aria": {
+     "ade_mm": 36.00175247350023,
+     "n": 29400
+    },
+    "balandabowl": {
+     "ade_mm": 43.132548067775446,
+     "n": 8946
+    },
+    "bbq": {
+     "ade_mm": 28.69976917029135,
+     "n": 31857
+    },
+    "birdhousetoy": {
+     "ade_mm": 39.55599017765961,
+     "n": 11991
+    },
+    "brushholder": {
+     "ade_mm": 56.671630515819515,
+     "n": 20496
+    },
+    "dinotoy": {
+     "ade_mm": 46.1947627113154,
+     "n": 15435
+    },
+    "milk": {
+     "ade_mm": 24.099671490671337,
+     "n": 26943
+    },
+    "mug": {
+     "ade_mm": 50.35006472814772,
+     "n": 25263
+    },
+    "mustard": {
+     "ade_mm": 18.59059419609537,
+     "n": 23751
+    },
+    "orangejuice": {
+     "ade_mm": 22.934322687785116,
+     "n": 32298
+    },
+    "ranch": {
+     "ade_mm": 32.68899040426173,
+     "n": 29022
+    },
+    "vase": {
+     "ade_mm": 42.08036984494397,
+     "n": 25137
+    }
+   },
+   "subject": {
+    "MHA016": {
+     "ade_mm": 44.801687443121175,
+     "n": 136668
+    },
+    "MMO925": {
+     "ade_mm": 25.679837019727106,
+     "n": 143871
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 19.536610832927458,
+    "mean_err_lat_mm": 25.925703516891762
+   },
+   "direction_err_deg_mag>20": 25.082178711884534,
+   "magnitude_err_mm": 21.798980462878728
+  },
+  "oracles": {}
+ },
+ {
+  "run": "B3_direct_stereo_rays_s1_A",
+  "model": "direct/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 45.73371368072483,
+  "left_to_object.ade_mm": 44.45970572134599,
+  "right_to_object.ade_mm": 47.00772164010367,
+  "mean_acc@10mm": 0.22173333726510414,
+  "mean_acc@50mm": 0.7756764073679139,
+  "mean_acc@100mm": 0.9178725567088882,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "33.40",
+  "params_M": "15.1",
+  "train_h": "1.8",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 98.67662143859104,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 26.09259554774207,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 12.792732564961907,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 50.06818589508913,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 44.26698647779008,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 41.71571289511359,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 458.4629643580001,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 92.37542917990045,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 37.40426872871262,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 249.02619995984884,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 79.28134103792695,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 44.45970572134596,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 47.007721640103675,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 43.16017392885045,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 43.68686132038125,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 45.67275145766179,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 45.080342351135116,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 48.68270859415634,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 43.82540910243899,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 58.860149580473944,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 38.39578574705288,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 29.911772063355492,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 37.261348944171225,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 72.20250662662795,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 36.28718366668548,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 140.45344110092884,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 30.978807740255228,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 48.98796959855705,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 24.680809116029465,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 38.21750687080854,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 51.53459265128505,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 21.552981563262048,
+    "mean_err_lat_mm": 36.65970681797064
+   },
+   "direction_err_deg_mag>20": 30.399148975749714,
+   "magnitude_err_mm": 30.117846481739008
+  },
+  "oracles": {}
+ },
+ {
+  "run": "B3b_direct_stereo_norays_A",
+  "model": "direct/precision/rays=False",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 47.47019248241331,
+  "left_to_object.ade_mm": 46.52632055003638,
+  "right_to_object.ade_mm": 48.41406441479023,
+  "mean_acc@10mm": 0.2051351218092031,
+  "mean_acc@50mm": 0.7543104859164474,
+  "mean_acc@100mm": 0.9079281656853659,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "34.78",
+  "params_M": "14.9",
+  "train_h": "1.7",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 101.37890264756106,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 27.218680343448813,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 14.287129418118091,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 51.843239655237745,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 45.99585643289978,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 43.4476548774773,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 453.5617253601438,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 95.5943376574402,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 38.73371956941278,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 254.01274346041632,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 88.19663490283068,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 46.526320550036374,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 48.41406441479033,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 45.16830746147057,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 45.549361385536415,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 47.34659375890731,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 46.60203954407357,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 49.96002077672004,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 45.80890231270417,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 60.77074774829368,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 43.80248153689972,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 31.834639863897166,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 38.607356669249945,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 75.36931044130107,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 36.09596791414902,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 139.31091985887497,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 31.923363893403398,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 49.066529617659306,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 26.088390050129412,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 39.92097395912864,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 53.30367486200213,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 21.836781261709163,
+    "mean_err_lat_mm": 38.46890093780263
+   },
+   "direction_err_deg_mag>20": 30.961210831302466,
+   "magnitude_err_mm": 31.1824459580561
+  },
+  "oracles": {}
+ },
+ {
+  "run": "FIF_geo_stereo_A",
+  "model": "geo/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 55.10631194532843,
+  "left_to_object.ade_mm": 55.31120753315858,
+  "right_to_object.ade_mm": 54.90141635749828,
+  "mean_acc@10mm": 0.09652985664061484,
+  "mean_acc@50mm": 0.6890768158489522,
+  "mean_acc@100mm": 0.895665138749452,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "44.11",
+  "params_M": "15.1",
+  "train_h": "1.9",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 112.94264569075249,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 33.494222474247444,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 19.399657285880583,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 62.699128675573796,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 52.57585358638994,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 51.17581798711415,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 463.86500417873566,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 100.3622516073015,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 44.8214799789527,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 295.2380887152728,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 105.89990908280072,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 55.311207533158495,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 54.90141635749815,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 51.61299441491244,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 51.14597119802905,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 55.08882639118937,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 54.73562403374667,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 59.67678201256824,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 53.94265629829205,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 73.4187851796246,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 50.49163924870759,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 39.35210597949087,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 41.46676447570039,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 95.64497640384205,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 37.72885780168463,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 143.21954414764534,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 38.589126177234704,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 44.63452061970732,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 35.56821994598875,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 42.66734309954168,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 64.7555915510001,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 25.711688227076916,
+    "mean_err_lat_mm": 44.30544216612252
+   },
+   "direction_err_deg_mag>20": 45.409956638346195,
+   "magnitude_err_mm": 35.131843348698915
+  },
+  "oracles": {
+   "official_geo_head": 55.10631194532843,
+   "official_dir_head": 174.441022404418,
+   "oracle_hand_pred_obj_gt": 47.20565101757934,
+   "oracle_hand_gt_obj_pred": 52.4557750659954
+  }
+ },
+ {
+  "run": "FIF_hybrid_gatefusion_A",
+  "model": "hybrid/gate/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 44.4878874943813,
+  "left_to_object.ade_mm": 43.553376061249025,
+  "right_to_object.ade_mm": 45.422398927513576,
+  "mean_acc@10mm": 0.21083776909623275,
+  "mean_acc@50mm": 0.7822277431498919,
+  "mean_acc@100mm": 0.9238084671319418,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "32.32",
+  "params_M": "15.4",
+  "train_h": "2.3",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 93.39169079054422,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 26.48399032410966,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 13.880742639349746,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 48.93612825785271,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 42.988608563633804,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 40.48858305878086,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 454.95028533461186,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 91.10281666821666,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 36.42411692862828,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 242.29672482470383,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 76.24603729690328,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 43.55337606124889,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 45.42239892751342,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 41.684684855436146,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 41.77938462413013,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 44.50942024116338,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 43.735946130265354,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 47.68212833619776,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 42.65089065253625,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 60.571447714123984,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 41.522753514420174,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 29.597993388008465,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 37.358236323959105,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 70.02731513085155,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 32.81924806013396,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 136.3941252520806,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 29.501092043878096,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 43.94818097474409,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 23.592325982473717,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 37.37077251531485,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 49.98652398116056,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 21.892666651639175,
+    "mean_err_lat_mm": 34.93365558491254
+   },
+   "direction_err_deg_mag>20": 29.81405671879333,
+   "magnitude_err_mm": 28.56978391282504
+  },
+  "oracles": {
+   "official_geo_head": 52.583762064542114,
+   "official_dir_head": 44.86080433390366,
+   "oracle_hand_pred_obj_gt": 42.6854287309179,
+   "oracle_hand_gt_obj_pred": 48.27278687840811
+  }
+ },
+ {
+  "run": "FIF_hybrid_meanfusion_A",
+  "model": "hybrid/mean/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 48.37996244544764,
+  "left_to_object.ade_mm": 47.28858588730302,
+  "right_to_object.ade_mm": 49.471339003592256,
+  "mean_acc@10mm": 0.17313426798195403,
+  "mean_acc@50mm": 0.7466228190278218,
+  "mean_acc@100mm": 0.9114002618847485,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "32.48",
+  "params_M": "15.1",
+  "train_h": "2.4",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 96.81491103880447,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 30.80662315579765,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 17.70725701045383,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 53.173353404400174,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 46.76300576407381,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 43.988121418267056,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 456.6383750137431,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 107.34451488448416,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 39.962890692783425,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 252.07110500547134,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 83.7513743990362,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 47.288585887303064,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 49.47133900359238,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 45.85819059620014,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 46.08519590436769,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 48.30741929631418,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 47.529073484309265,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 51.330178278340625,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 46.337026729410425,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 63.092966459199296,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 48.89268581678674,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 31.732378995449057,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 45.40533206262389,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 70.1701790513991,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 38.69074498167647,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 139.04027757301665,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 30.67866502929702,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 50.62980107327122,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 25.66751880662714,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 44.36951058560099,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 51.46642437798941,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 23.278068928470255,
+    "mean_err_lat_mm": 38.530300939725464
+   },
+   "direction_err_deg_mag>20": 31.949946469016957,
+   "magnitude_err_mm": 30.45968770567486
+  },
+  "oracles": {
+   "official_geo_head": 52.11198862736444,
+   "official_dir_head": 52.697879615802506,
+   "oracle_hand_pred_obj_gt": 43.06773406998785,
+   "oracle_hand_gt_obj_pred": 49.96849084230158
+  }
+ },
+ {
+  "run": "FIF_hybrid_mono_A",
+  "model": "hybrid/precision/rays=True",
+  "views": "h0",
+  "fold": "A",
+  "mean_ade_mm": 45.18816621843557,
+  "left_to_object.ade_mm": 41.68566143362484,
+  "right_to_object.ade_mm": 48.6906710032463,
+  "mean_acc@10mm": 0.21932541124623822,
+  "mean_acc@50mm": 0.7825355352361505,
+  "mean_acc@100mm": 0.9176083079065682,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "33.32",
+  "params_M": "15.1",
+  "train_h": "1.3",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 96.06822925941364,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 26.415545006177155,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 13.294698755828122,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 49.78330457748376,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 43.59892390070453,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 41.50801139442355,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 443.0795937548983,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 83.37491573729925,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 37.09997762177735,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 247.44182982495272,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 73.13723954165553,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 41.685661433624915,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 48.690671003246436,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 42.924016791346666,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 43.00977410289156,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 45.26642954127264,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 44.06366436232739,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 48.027742052222415,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 43.171919620139974,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 57.743073026580554,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 35.177752011654846,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 28.359670558908533,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 38.766390312134696,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 73.08343428002375,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 36.967603949746895,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 134.539475904239,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 30.300809812217818,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 46.02161310759491,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 24.562400683652758,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 37.876059020010175,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 50.783492957685766,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 21.46436320131701,
+    "mean_err_lat_mm": 35.86364459909584
+   },
+   "direction_err_deg_mag>20": 29.86425273453924,
+   "magnitude_err_mm": 29.540173104151084
+  },
+  "oracles": {
+   "official_geo_head": 57.99558502582914,
+   "official_dir_head": 45.063745114648675,
+   "oracle_hand_pred_obj_gt": 44.669649857763574,
+   "oracle_hand_gt_obj_pred": 48.78795510107051
+  }
+ },
+ {
+  "run": "FIF_hybrid_noaux_A",
+  "model": "hybrid/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 45.71129680443046,
+  "left_to_object.ade_mm": 45.298135483422186,
+  "right_to_object.ade_mm": 46.124458125438736,
+  "mean_acc@10mm": 0.20663679507772242,
+  "mean_acc@50mm": 0.7735851613245772,
+  "mean_acc@100mm": 0.9196284338199966,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "34.09",
+  "params_M": "15.1",
+  "train_h": "2.2",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 95.83900289757277,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 26.97140256535086,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 14.750467204181342,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 51.37170784688824,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 43.81582860575724,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 41.358125407574164,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 473.7909390922414,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 100.11272012090232,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 37.25066635175104,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 255.39948066749645,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 77.46819828879337,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 45.29813548342213,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 46.12445812543876,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 43.57175457386722,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 44.027015845622394,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 45.3830998188714,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 44.46256148973006,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 47.804856329612306,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 44.43737642559003,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 59.32227392724743,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 42.42650123117998,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 30.66212525653107,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 39.28596655020064,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 71.28355092708733,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 32.59270006838955,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 136.2087495384302,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 31.57183613345961,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 44.71576018058106,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 26.259641232379657,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 38.18949869596393,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 51.5347816910587,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 22.289432134768546,
+    "mean_err_lat_mm": 36.26817907128161
+   },
+   "direction_err_deg_mag>20": 30.263404077157226,
+   "magnitude_err_mm": 30.619916366533914
+  },
+  "oracles": {
+   "official_geo_head": 60.86378517435146,
+   "official_dir_head": 46.03821083310055,
+   "oracle_hand_pred_obj_gt": 138.27399687555416,
+   "oracle_hand_gt_obj_pred": 151.02495313293227
+  }
+ },
+ {
+  "run": "FIF_hybrid_nonll_A",
+  "model": "hybrid/mean/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 46.481193940207135,
+  "left_to_object.ade_mm": 44.853439104165915,
+  "right_to_object.ade_mm": 48.108948776248354,
+  "mean_acc@10mm": 0.16874481909648598,
+  "mean_acc@50mm": 0.7565875722226791,
+  "mean_acc@100mm": 0.9212566162947953,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "32.41",
+  "params_M": "15.1",
+  "train_h": "2.3",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 95.43708267971671,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 28.074838095449145,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 16.33569460999526,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 50.74588319759713,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 45.03211325507005,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 42.62394037838036,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 452.94044991786456,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 89.22338063155235,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 38.662220937814006,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 248.1004731831047,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 69.09596634942584,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 44.85343910416591,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 48.10894877624839,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 44.44369427690651,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 44.73724558321399,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 46.14806664496218,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 45.277424426441385,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 48.62225303032386,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 45.19218260240324,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 59.49235800682893,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 42.94839763916674,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 33.967294642763335,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 38.51723607798962,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 71.7628000884492,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 34.58287015547116,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 133.8913845216169,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 32.73987677374202,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 45.5314977360843,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 26.351481999672764,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 38.844442927562156,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 52.36803261355533,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 22.442854763945316,
+    "mean_err_lat_mm": 36.79024369507903
+   },
+   "direction_err_deg_mag>20": 31.30747639441644,
+   "magnitude_err_mm": 29.203735611729012
+  },
+  "oracles": {
+   "official_geo_head": 51.882474241014386,
+   "official_dir_head": 52.0174533287515,
+   "oracle_hand_pred_obj_gt": 42.597447978359575,
+   "oracle_hand_gt_obj_pred": 46.77861250729748
+  }
+ },
+ {
+  "run": "FIF_hybrid_stereo_A",
+  "model": "hybrid/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 44.425680440317926,
+  "left_to_object.ade_mm": 43.94895306892219,
+  "right_to_object.ade_mm": 44.902407811713665,
+  "mean_acc@10mm": 0.21094421674262012,
+  "mean_acc@50mm": 0.7677813526150277,
+  "mean_acc@100mm": 0.9205780540249471,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "31.19",
+  "params_M": "15.1",
+  "train_h": "2.4",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 92.84750778100894,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 26.710519049913312,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 13.987005940241401,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 45.99577422748718,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 43.894138827635125,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 40.50767023324205,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 456.281560056665,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 88.4725232848299,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 37.2839451032618,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 220.2679960433792,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 72.13199594925882,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 43.94895306892224,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 44.90240781171363,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 41.961195430623576,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 42.23873742396988,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 44.22322254219497,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 43.472222946891044,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 47.14571221603481,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 42.61109228757246,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 59.61099333773052,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 39.81285893423017,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 29.666217074748428,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 39.37553094751107,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 65.10953196983053,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 34.896898395674874,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 134.48867674780382,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 30.84711597485248,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 50.221257375835,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 24.48668365619897,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 38.854804359171574,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 48.735109774449214,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 21.75802394651947,
+    "mean_err_lat_mm": 35.07892100864359
+   },
+   "direction_err_deg_mag>20": 29.834158221872304,
+   "magnitude_err_mm": 29.166618829613377
+  },
+  "oracles": {
+   "official_geo_head": 55.11378322443017,
+   "official_dir_head": 44.549087500827184,
+   "oracle_hand_pred_obj_gt": 46.45588024342331,
+   "oracle_hand_gt_obj_pred": 51.3533042551216
+  }
+ },
+ {
+  "run": "FIF_hybrid_stereo_B",
+  "model": "hybrid/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "B",
+  "mean_ade_mm": 34.07549642759449,
+  "left_to_object.ade_mm": 37.438630701556036,
+  "right_to_object.ade_mm": 30.71236215363294,
+  "mean_acc@10mm": 0.2518522700719257,
+  "mean_acc@50mm": 0.8073919131449179,
+  "mean_acc@100mm": 0.9302221900066971,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "22.75",
+  "params_M": "15.1",
+  "train_h": "2.3",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 71.51593842314954,
+     "n": 89898
+    },
+    "mid(15-60)": {
+     "ade_mm": 20.074140126792145,
+     "n": 109280
+    },
+    "near(<15)": {
+     "ade_mm": 9.570603459801248,
+     "n": 81361
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 20.997568306027727,
+     "n": 59760
+    },
+    "visible": {
+     "ade_mm": 36.89980048620935,
+     "n": 220779
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 32.66914431816321,
+     "n": 269955
+    },
+    "out_of_view": {
+     "ade_mm": 203.72483830928192,
+     "n": 903
+    },
+    "partial": {
+     "ade_mm": 41.14795476810252,
+     "n": 9681
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 31.574801572947774,
+     "n": 268296
+    },
+    "out_of_view": {
+     "ade_mm": 117.59614945817867,
+     "n": 3591
+    },
+    "partial": {
+     "ade_mm": 58.695677068090085,
+     "n": 8652
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 37.438630701555965,
+     "n": 116781
+    },
+    "right": {
+     "ade_mm": 30.71236215363296,
+     "n": 163758
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 31.479146703855275,
+     "n": 53436
+    },
+    "fingertips": {
+     "ade_mm": 31.960420378252728,
+     "n": 66795
+    },
+    "intermediate": {
+     "ade_mm": 33.25809618204377,
+     "n": 53436
+    },
+    "palm": {
+     "ade_mm": 33.32797203427974,
+     "n": 13359
+    },
+    "proximal": {
+     "ade_mm": 35.61940266062048,
+     "n": 53436
+    },
+    "thumb": {
+     "ade_mm": 32.275447422652455,
+     "n": 26718
+    },
+    "wrist": {
+     "ade_mm": 44.651393089262136,
+     "n": 13359
+    }
+   },
+   "object": {
+    "aria": {
+     "ade_mm": 33.10752856715096,
+     "n": 29400
+    },
+    "balandabowl": {
+     "ade_mm": 40.33505040619519,
+     "n": 8946
+    },
+    "bbq": {
+     "ade_mm": 27.191628152441854,
+     "n": 31857
+    },
+    "birdhousetoy": {
+     "ade_mm": 37.4749361605438,
+     "n": 11991
+    },
+    "brushholder": {
+     "ade_mm": 51.37685447542433,
+     "n": 20496
+    },
+    "dinotoy": {
+     "ade_mm": 44.069665212624614,
+     "n": 15435
+    },
+    "milk": {
+     "ade_mm": 22.92471979749736,
+     "n": 26943
+    },
+    "mug": {
+     "ade_mm": 50.18669639051908,
+     "n": 25263
+    },
+    "mustard": {
+     "ade_mm": 19.401454981661196,
+     "n": 23751
+    },
+    "orangejuice": {
+     "ade_mm": 24.097013447867933,
+     "n": 32298
+    },
+    "ranch": {
+     "ade_mm": 32.109433065215164,
+     "n": 29022
+    },
+    "vase": {
+     "ade_mm": 38.26946663569201,
+     "n": 25137
+    }
+   },
+   "subject": {
+    "MHA016": {
+     "ade_mm": 42.0481901098236,
+     "n": 136668
+    },
+    "MMO925": {
+     "ade_mm": 25.40382486799744,
+     "n": 143871
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 18.854460999256037,
+    "mean_err_lat_mm": 24.59643408047573
+   },
+   "direction_err_deg_mag>20": 24.494891423558947,
+   "magnitude_err_mm": 20.010483556304333
+  },
+  "oracles": {
+   "official_geo_head": 41.46679609639877,
+   "official_dir_head": 34.289603275322705,
+   "oracle_hand_pred_obj_gt": 35.075612596741315,
+   "oracle_hand_gt_obj_pred": 43.108641064859455
+  }
+ },
+ {
+  "run": "FIF_hybrid_stereo_s1_A",
+  "model": "hybrid/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 43.822833311127674,
+  "left_to_object.ade_mm": 43.11891748833398,
+  "right_to_object.ade_mm": 44.52674913392137,
+  "mean_acc@10mm": 0.2210798987384115,
+  "mean_acc@50mm": 0.787439784053898,
+  "mean_acc@100mm": 0.9266360041860313,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "31.87",
+  "params_M": "15.1",
+  "train_h": "2.4",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 91.25687164906246,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 26.483252162630396,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 13.975828750313514,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 49.14756071381897,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 42.034747105227254,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 39.76406130360294,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 435.58075014575616,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 95.77708522750497,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 35.91608786756327,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 245.98168296539447,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 68.37810121219619,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 43.11891748833398,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 44.52674913392132,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 41.525602614417984,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 41.947406582447144,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 43.69479003633283,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 42.999172035384824,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 46.42861332159948,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 41.91090123998374,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 56.94875294737082,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 42.98328703026513,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 28.174849379390505,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 38.1326829117494,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 67.78573432218978,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 32.19476309323178,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 134.12232646282666,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 29.920162681512046,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 42.312420940387746,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 22.90092882004945,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 37.61612535754036,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 48.62045230118627,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 21.456870123413278,
+    "mean_err_lat_mm": 34.50352746170441
+   },
+   "direction_err_deg_mag>20": 28.878262413996172,
+   "magnitude_err_mm": 28.42181964551366
+  },
+  "oracles": {
+   "official_geo_head": 56.71957950304139,
+   "official_dir_head": 43.9760647258629,
+   "oracle_hand_pred_obj_gt": 45.973216239854565,
+   "oracle_hand_gt_obj_pred": 50.14024145414663
+  }
+ },
+ {
+  "run": "T2_B3_hot3d",
+  "model": "direct/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 42.625325549002156,
+  "left_to_object.ade_mm": 39.83364775159454,
+  "right_to_object.ade_mm": 45.41700334640977,
+  "mean_acc@10mm": 0.08668145189287654,
+  "mean_acc@50mm": 0.7495246536159136,
+  "mean_acc@100mm": 0.8907370421651235,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "37.36",
+  "params_M": "15.1",
+  "train_h": "0.1",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 93.11419457714649,
+     "n": 5078
+    },
+    "mid(15-60)": {
+     "ade_mm": 25.0058364746881,
+     "n": 8485
+    },
+    "near(<15)": {
+     "ade_mm": 15.381304660741511,
+     "n": 4035
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 31.080317320997914,
+     "n": 3387
+    },
+    "visible": {
+     "ade_mm": 45.162404622500205,
+     "n": 14211
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 40.751580876686276,
+     "n": 16527
+    },
+    "out_of_view": {
+     "ade_mm": 81.79391083814693,
+     "n": 126
+    },
+    "partial": {
+     "ade_mm": 66.94662110261353,
+     "n": 945
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 41.17926017741028,
+     "n": 16422
+    },
+    "out_of_view": {
+     "ade_mm": 70.69913577150302,
+     "n": 483
+    },
+    "partial": {
+     "ade_mm": 52.92709039755105,
+     "n": 693
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 39.833647751594526,
+     "n": 9345
+    },
+    "right": {
+     "ade_mm": 45.41700334640974,
+     "n": 8253
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 37.58542569632792,
+     "n": 3352
+    },
+    "fingertips": {
+     "ade_mm": 34.55464342489706,
+     "n": 4190
+    },
+    "intermediate": {
+     "ade_mm": 43.23866445828102,
+     "n": 3352
+    },
+    "palm": {
+     "ade_mm": 44.5617826011146,
+     "n": 838
+    },
+    "proximal": {
+     "ade_mm": 48.90625529512141,
+     "n": 3352
+    },
+    "thumb": {
+     "ade_mm": 41.769403285072194,
+     "n": 1676
+    },
+    "wrist": {
+     "ade_mm": 71.69880576759023,
+     "n": 838
+    }
+   },
+   "object": {
+    "aria": {
+     "ade_mm": 71.25003686964861,
+     "n": 105
+    },
+    "balandabowl": {
+     "ade_mm": 52.49427458442506,
+     "n": 2520
+    },
+    "birdhousetoy": {
+     "ade_mm": 23.497799494453492,
+     "n": 1050
+    },
+    "brushholder": {
+     "ade_mm": 42.57810758318014,
+     "n": 1197
+    },
+    "canparmesan": {
+     "ade_mm": 31.104000913097813,
+     "n": 336
+    },
+    "cansoup": {
+     "ade_mm": 31.715155997420357,
+     "n": 966
+    },
+    "cantomatosauce": {
+     "ade_mm": 64.84153045127293,
+     "n": 462
+    },
+    "dumbbell": {
+     "ade_mm": 70.95621006140925,
+     "n": 63
+    },
+    "keyboard": {
+     "ade_mm": 35.08653175544435,
+     "n": 4515
+    },
+    "milk": {
+     "ade_mm": 80.32342642246088,
+     "n": 441
+    },
+    "mouse": {
+     "ade_mm": 74.18595186986792,
+     "n": 378
+    },
+    "mug": {
+     "ade_mm": 67.86216412792936,
+     "n": 777
+    },
+    "mug2": {
+     "ade_mm": 17.42056213986811,
+     "n": 84
+    },
+    "mustard": {
+     "ade_mm": 69.40870083360402,
+     "n": 63
+    },
+    "orangejuice": {
+     "ade_mm": 30.58890758525428,
+     "n": 2163
+    },
+    "vase": {
+     "ade_mm": 46.13197292058967,
+     "n": 1575
+    },
+    "vegetables": {
+     "ade_mm": 27.28770028918816,
+     "n": 378
+    },
+    "waffles": {
+     "ade_mm": 50.608837491118216,
+     "n": 525
+    }
+   },
+   "subject": {
+    "P0017": {
+     "ade_mm": 51.31159231774667,
+     "n": 6216
+    },
+    "P0018": {
+     "ade_mm": 37.62502573375361,
+     "n": 5334
+    },
+    "P0021": {
+     "ade_mm": 37.60370729920888,
+     "n": 6048
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 24.185529637940306,
+    "mean_err_lat_mm": 30.814193173971894
+   },
+   "direction_err_deg_mag>20": 46.40723185452992,
+   "magnitude_err_mm": 28.26724579747503
+  },
+  "oracles": {}
+ },
+ {
+  "run": "T2_FIF_hot3d",
+  "model": "hybrid/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 43.32169357002505,
+  "left_to_object.ade_mm": 40.00137845984755,
+  "right_to_object.ade_mm": 46.64200868020255,
+  "mean_acc@10mm": 0.0821584796539767,
+  "mean_acc@50mm": 0.7477935840831458,
+  "mean_acc@100mm": 0.8942713374911677,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "36.44",
+  "params_M": "15.1",
+  "train_h": "0.1",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 91.70152318977941,
+     "n": 5078
+    },
+    "mid(15-60)": {
+     "ade_mm": 26.09802093427805,
+     "n": 8485
+    },
+    "near(<15)": {
+     "ade_mm": 17.756465169749195,
+     "n": 4035
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 33.10650854696834,
+     "n": 3387
+    },
+    "visible": {
+     "ade_mm": 45.50120574881467,
+     "n": 14211
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 41.3785760603576,
+     "n": 16527
+    },
+    "out_of_view": {
+     "ade_mm": 82.57140158250319,
+     "n": 126
+    },
+    "partial": {
+     "ade_mm": 68.23455682122936,
+     "n": 945
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 41.85823867865762,
+     "n": 16422
+    },
+    "out_of_view": {
+     "ade_mm": 71.56809107677005,
+     "n": 483
+    },
+    "partial": {
+     "ade_mm": 53.08224498411518,
+     "n": 693
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 40.00137845984758,
+     "n": 9345
+    },
+    "right": {
+     "ade_mm": 46.64200868020253,
+     "n": 8253
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 38.47359592195622,
+     "n": 3352
+    },
+    "fingertips": {
+     "ade_mm": 35.486190920312204,
+     "n": 4190
+    },
+    "intermediate": {
+     "ade_mm": 43.94714858797713,
+     "n": 3352
+    },
+    "palm": {
+     "ade_mm": 44.90013689767645,
+     "n": 838
+    },
+    "proximal": {
+     "ade_mm": 48.49772548282746,
+     "n": 3352
+    },
+    "thumb": {
+     "ade_mm": 44.09533411525837,
+     "n": 1676
+    },
+    "wrist": {
+     "ade_mm": 71.2332139328388,
+     "n": 838
+    }
+   },
+   "object": {
+    "aria": {
+     "ade_mm": 63.65853514393948,
+     "n": 105
+    },
+    "balandabowl": {
+     "ade_mm": 57.34222840519791,
+     "n": 2520
+    },
+    "birdhousetoy": {
+     "ade_mm": 25.80820123081862,
+     "n": 1050
+    },
+    "brushholder": {
+     "ade_mm": 44.65628048207366,
+     "n": 1197
+    },
+    "canparmesan": {
+     "ade_mm": 32.57123130096476,
+     "n": 336
+    },
+    "cansoup": {
+     "ade_mm": 34.68237803802471,
+     "n": 966
+    },
+    "cantomatosauce": {
+     "ade_mm": 63.68131042799263,
+     "n": 462
+    },
+    "dumbbell": {
+     "ade_mm": 73.61607822114077,
+     "n": 63
+    },
+    "keyboard": {
+     "ade_mm": 33.491617755460844,
+     "n": 4515
+    },
+    "milk": {
+     "ade_mm": 79.78697824696799,
+     "n": 441
+    },
+    "mouse": {
+     "ade_mm": 74.9389155407363,
+     "n": 378
+    },
+    "mug": {
+     "ade_mm": 69.28807754097335,
+     "n": 777
+    },
+    "mug2": {
+     "ade_mm": 22.4777212226868,
+     "n": 84
+    },
+    "mustard": {
+     "ade_mm": 67.41840369966292,
+     "n": 63
+    },
+    "orangejuice": {
+     "ade_mm": 32.46703231532048,
+     "n": 2163
+    },
+    "vase": {
+     "ade_mm": 43.01580519494529,
+     "n": 1575
+    },
+    "vegetables": {
+     "ade_mm": 27.177900677208015,
+     "n": 378
+    },
+    "waffles": {
+     "ade_mm": 48.67747209229196,
+     "n": 525
+    }
+   },
+   "subject": {
+    "P0017": {
+     "ade_mm": 52.87541548372839,
+     "n": 6216
+    },
+    "P0018": {
+     "ade_mm": 36.45907366871317,
+     "n": 5334
+    },
+    "P0021": {
+     "ade_mm": 38.95553864901049,
+     "n": 6048
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 23.48130937064949,
+    "mean_err_lat_mm": 32.31833274977654
+   },
+   "direction_err_deg_mag>20": 46.72949777102492,
+   "magnitude_err_mm": 27.796436594415706
+  },
+  "oracles": {
+   "official_geo_head": 60.19233372697972,
+   "official_dir_head": 45.957026456791425,
+   "oracle_hand_pred_obj_gt": 195.1967761935295,
+   "oracle_hand_gt_obj_pred": 241.7244066127593
+  }
+ },
+ {
+  "run": "T3_B3_joint",
+  "model": "direct/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 46.195238077717946,
+  "left_to_object.ade_mm": 45.97406647720638,
+  "right_to_object.ade_mm": 46.416409678229506,
+  "mean_acc@10mm": 0.21346302868059475,
+  "mean_acc@50mm": 0.75995233312113,
+  "mean_acc@100mm": 0.911486361539586,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "32.51",
+  "params_M": "15.1",
+  "train_h": "2.3",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 97.09969119907946,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 27.608138487284027,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 14.158048426717905,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 47.572037367392724,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 45.73227343016743,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 42.212903942020645,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 458.2370592416153,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 92.27217120370462,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 39.01868229176311,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 231.16677580269388,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 67.40942588354986,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 45.97406647720649,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 46.4164096782295,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 43.77053705080684,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 44.078842960045776,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 46.08115029560881,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 45.73596366002523,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 49.17638211487495,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 44.356362150544065,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 59.08929477439883,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 40.682469135919916,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 34.927309006429525,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 39.415964667293196,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 67.4982730747631,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 35.504526833519414,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 142.0516897738749,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 32.01219063688938,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 46.62566478611936,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 25.518170596521934,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 38.98419947235845,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 51.78184095246772,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 21.762941945753425,
+    "mean_err_lat_mm": 37.050993043860565
+   },
+   "direction_err_deg_mag>20": 30.878392318933635,
+   "magnitude_err_mm": 29.23891067572136
+  },
+  "oracles": {}
+ },
+ {
+  "run": "T3_FIF_joint",
+  "model": "hybrid/precision/rays=True",
+  "views": "h0+h1",
+  "fold": "A",
+  "mean_ade_mm": 46.15986996546661,
+  "left_to_object.ade_mm": 45.537076818096786,
+  "right_to_object.ade_mm": 46.782663112836445,
+  "mean_acc@10mm": 0.20552753034478255,
+  "mean_acc@50mm": 0.7655458556183544,
+  "mean_acc@100mm": 0.9207667047212393,
+  "mean_recall": 1.0,
+  "surface_distance_mm": "32.71",
+  "params_M": "15.1",
+  "train_h": "2.5",
+  "stratified": {
+   "magnitude": {
+    "far(>60)": {
+     "ade_mm": 95.44795433938394,
+     "n": 68057
+    },
+    "mid(15-60)": {
+     "ade_mm": 28.19541508184824,
+     "n": 82383
+    },
+    "near(<15)": {
+     "ade_mm": 15.078606333637921,
+     "n": 60358
+    }
+   },
+   "visibility0": {
+    "occluded_or_outside": {
+     "ade_mm": 49.03778737729341,
+     "n": 52743
+    },
+    "visible": {
+     "ade_mm": 45.18957837846629,
+     "n": 158055
+    }
+   },
+   "object_fov0": {
+    "in_view": {
+     "ade_mm": 41.998972546076715,
+     "n": 202944
+    },
+    "out_of_view": {
+     "ade_mm": 455.8317184637137,
+     "n": 1218
+    },
+    "partial": {
+     "ade_mm": 97.98015563129576,
+     "n": 6636
+    }
+   },
+   "hand_fov0": {
+    "in_view": {
+     "ade_mm": 38.57207725954176,
+     "n": 195930
+    },
+    "out_of_view": {
+     "ade_mm": 238.49344116539785,
+     "n": 6657
+    },
+    "partial": {
+     "ade_mm": 71.09498172561258,
+     "n": 8211
+    }
+   },
+   "hand": {
+    "left": {
+     "ade_mm": 45.53707681809687,
+     "n": 106659
+    },
+    "right": {
+     "ade_mm": 46.78266311283648,
+     "n": 104139
+    }
+   },
+   "joint_group": {
+    "distal": {
+     "ade_mm": 43.51647847942747,
+     "n": 40152
+    },
+    "fingertips": {
+     "ade_mm": 43.70719260438357,
+     "n": 50190
+    },
+    "intermediate": {
+     "ade_mm": 46.225113978913946,
+     "n": 40152
+    },
+    "palm": {
+     "ade_mm": 45.73174765705878,
+     "n": 10038
+    },
+    "proximal": {
+     "ade_mm": 49.20834810006643,
+     "n": 40152
+    },
+    "thumb": {
+     "ade_mm": 44.1430472898397,
+     "n": 20076
+    },
+    "wrist": {
+     "ade_mm": 60.847352038403265,
+     "n": 10038
+    }
+   },
+   "object": {
+    "birdhousetoy": {
+     "ade_mm": 43.901131854202475,
+     "n": 22806
+    },
+    "brushholder": {
+     "ade_mm": 31.07896108099235,
+     "n": 27657
+    },
+    "dinotoy": {
+     "ade_mm": 40.4070060916569,
+     "n": 29022
+    },
+    "dumbbell": {
+     "ade_mm": 66.46490567598185,
+     "n": 35427
+    },
+    "milk": {
+     "ade_mm": 36.76685912550231,
+     "n": 32256
+    },
+    "mouse": {
+     "ade_mm": 146.14471381491015,
+     "n": 11130
+    },
+    "mug": {
+     "ade_mm": 29.986455823388496,
+     "n": 11382
+    },
+    "orangejuice": {
+     "ade_mm": 47.55461858780909,
+     "n": 7980
+    },
+    "vase": {
+     "ade_mm": 24.364785960690874,
+     "n": 33138
+    }
+   },
+   "subject": {
+    "LYA722": {
+     "ade_mm": 40.61673409956039,
+     "n": 92064
+    },
+    "XYZ109": {
+     "ade_mm": 50.4446899970282,
+     "n": 118734
+    }
+   },
+   "along_ray_vs_lateral": {
+    "mean_err_par_mm": 22.210348602053976,
+    "mean_err_lat_mm": 36.74583981573677
+   },
+   "direction_err_deg_mag>20": 30.996881537561762,
+   "magnitude_err_mm": 29.65936481051599
+  },
+  "oracles": {
+   "official_geo_head": 62.3808322261454,
+   "official_dir_head": 45.99331052056358,
+   "oracle_hand_pred_obj_gt": 47.62597075048951,
+   "oracle_hand_gt_obj_pred": 54.782669334435134
+  }
+ }
+]

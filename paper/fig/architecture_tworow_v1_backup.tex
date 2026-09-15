@@ -1,0 +1,65 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage{amsmath,amssymb,xcolor,graphicx}
+\input{../macros.tex}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc}
+\begin{document}
+\small
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=1.5pt, minimum height=8mm, inner sep=3pt, align=center, font=\small, line width=0.5pt},
+  frozen/.style={box, fill=black!7, draw=black!55},
+  train/.style={box, fill=blue!8, draw=blue!45!black},
+  geo/.style={box, fill=green!9, draw=green!40!black},
+  outbox/.style={box, fill=orange!12, draw=orange!65!black},
+  arr/.style={-{Latex[length=2mm]}, line width=0.55pt, draw=black!75},
+  wire/.style={line width=0.55pt, draw=black!75},
+  lbl/.style={font=\footnotesize, text=black!65, inner sep=1pt, align=center},
+  loss/.style={font=\footnotesize, text=red!55!black, inner sep=1pt, align=center},
+]
+% ---------------------------------------------------------------- row 1: perception
+\node[inner sep=0] (img0) at (0,1.0) {\includegraphics[width=15mm]{thumb_headset0.png}};
+\node[inner sep=0] (img1) at (0,-1.0) {\includegraphics[width=15mm]{thumb_headset1.png}};
+\node[lbl, above=1mm of img0] {two headset views, $1024{\times}1280$};
+\node[lbl, below=1mm of img1] {calibration $\mathbf{K}_v,\ \mathbf{T}_{w\leftarrow v}$};
+\node[frozen, minimum height=18mm, minimum width=17mm] (enc) at (3.0,0) {frozen\\DINOv3\\ViT-B/16};
+\draw[arr] (img0.east) -- (enc.west |- img0.east);
+\draw[arr] (img1.east) -- (enc.west |- img1.east);
+\node[train, minimum height=18mm, minimum width=38mm] (tok) at (7.1,0) {camera-aware tokens\\$\mathbf{P}\mathbf{X}_v+\mathrm{MLP}(\boldsymbol{\pi})+\mathbf{e}_{\rm view}+\mathbf{e}_{\rm pos}$\\{\footnotesize $2{\times}720$ tokens, computed once and cached}};
+\draw[arr] (enc) -- node[lbl, above=0.3mm] {$\mathbf{X}_v$} (tok);
+\node[lbl, below=1mm of tok] {Pl\"ucker ray of each token, $\boldsymbol{\pi}=[\mathbf{d},\ \mathbf{o}\times\mathbf{d}]$, in the reference camera};
+\node[train, minimum height=18mm, minimum width=27mm] (dec) at (11.7,0) {transformer decoder\\$L{=}6$ layers\\self- and cross-attention};
+\draw[arr] (tok) -- node[lbl, above=0.3mm] {memory} (dec);
+\node[lbl, above=1mm of dec] {$42$ joint queries $\mathbf{z}_{h,j}$, $16$ object queries $\mathbf{z}^{o}_{n}+\mathbf{e}_{\rm obj}(a)$};
+% ---------------------------------------------------------------- row 2: heads
+\node[train, minimum width=34mm] (hdir) at (2.2,-4.0) {direct head\\$\field^{\rm dir}_{h,j},\ s^{\rm dir}_{h,j}$};
+\node[train, minimum width=34mm] (hj) at (2.2,-5.6) {joint head\\$\hat{\joint}_{h,j}$ (camera frame, mm)};
+\node[train, minimum width=34mm] (hc) at (2.2,-7.2) {object control points\\$\hat{\mathbf{c}}_n,\ w_n$};
+\coordinate (busx) at (-2.0,0);
+\draw[wire] (dec.south) -- ++(0,-1.7) -| (busx |- hdir.west);
+\draw[wire] (busx |- hdir.west) -- (busx |- hc.west);
+\draw[arr] (busx |- hdir.west) -- (hdir.west);
+\draw[arr] (busx |- hj.west) -- (hj.west);
+\draw[arr] (busx |- hc.west) -- (hc.west);
+\node[lbl, above=0.5mm] at (5.7,-2.6) {refined queries};
+% ---------------------------------------------------------------- geometric route
+\node[geo, minimum width=38mm] (proc) at (7.4,-7.2) {weighted Procrustes\\$(\hat{\Rot}_o,\hat{\trans}_o)$ from $\{\mathbf{c}_n\},\{\hat{\mathbf{c}}_n\},\{w_n\}$};
+\draw[arr] (hc) -- (proc);
+\node[lbl, below=1mm of proc, xshift=5mm] {canonical mesh $\mesh_a$, alias $a$ given};
+\node[geo, minimum width=54mm] (snn) at (12.4,-6.4) {soft nearest vertex on the posed mesh\\$w_{jm}\propto \exp\!\big(-\|\hat{\Rot}_o\vtx_m+\hat{\trans}_o-\hat{\joint}_j\|^2/\tau\big)$\\$\field^{\rm geo}_j=\sum_m w_{jm}\,(\hat{\Rot}_o\vtx_m+\hat{\trans}_o)-\hat{\joint}_j$};
+\draw[arr] (proc.east) -- ++(0.4,0) |- ($(snn.west)+(0,-0.4)$);
+\draw[arr] (hj.east) -- ++(0.4,0) |- ($(snn.west)+(0,0.4)$);
+\node[lbl, below=1mm of snn, xshift=13mm] {$\tau$: $400\to25\,\mathrm{mm}^2$, exact minimum at test\\endpoints on the surface, symmetry invariant};
+% ---------------------------------------------------------------- fusion and output
+\node[outbox, minimum width=54mm] (fuse) at (12.4,-4.0) {precision-weighted fusion\\$\hat{\field}=\dfrac{\lambda^{\rm dir}\field^{\rm dir}+\lambda^{\rm geo}\field^{\rm geo}}{\lambda^{\rm dir}+\lambda^{\rm geo}},\qquad \lambda^{k}=e^{-2s^{k}}$};
+\draw[arr] (hdir.east) -- (fuse.west);
+\draw[arr] (snn.north) -- node[lbl, right=0.5mm] {$\field^{\rm geo},\ s^{\rm geo}$} (fuse.south);
+\node[outbox, minimum width=26mm] (world) at (17.4,-4.0) {$\Rot_{w\leftarrow c}\,\hat{\field}$\\$2{\times}21{\times}3$ (mm)};
+\draw[arr] (fuse) -- (world);
+\node[lbl, below=1mm of world] {rotated to the\\world frame};
+% ---------------------------------------------------------------- losses
+\begin{scope}[on background layer]
+\node[fit=(hdir)(hj)(hc), draw=black!25, dashed, inner sep=2.5mm, rounded corners=2pt] (heads) {};
+\end{scope}
+\node[loss, below=1mm of heads.south, xshift=-2mm] {$\mathcal{L}_{\rm joint}$ ($\ell_1$), $\mathcal{L}_{\rm obj}$ (ADD-S), $\mathcal{L}_{\rm vis},\ \mathcal{L}_{\rm pres}$ (BCE)\\also on frames with only a hand or only an object};
+\node[loss, above=1mm of fuse.north] {$\mathcal{L}_{\rm field}$: ADE of $\hat{\field}$\qquad$+\ \lambda_{\rm dir}\mathcal{L}^{\rm NLL}_{\rm dir}+\lambda_{\rm geo}\mathcal{L}^{\rm NLL}_{\rm geo}$};
+\end{tikzpicture}
+\end{document}

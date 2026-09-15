@@ -1,0 +1,9 @@
+{
+  "source": "third_party/SHOW3D-dataset-api/show3d/interaction_field/baseline/RESULTS.md",
+  "note": "Organisers' published leave-2-subjects-out dev run. Split verified identical to our fold A: XYZ109 + LYA722, 11948 labelled frames, 20163 hand-fields.",
+  "run": "B1_interfield_A", "model": "InterField ResNet-50 (official)", "views": "h0", "fold": "A",
+  "mean_ade_mm": 60.47, "left_to_object.ade_mm": 60.27, "right_to_object.ade_mm": 60.68,
+  "mean_acc@10mm": 0.150, "mean_acc@50mm": 0.682, "mean_acc@100mm": 0.861, "mean_recall": 1.000,
+  "acc_note": "ACC (temporal smoothness) 0.10 m/s^2", "params_M": "24.9", "train_h": "official", "retrained_locally": false,
+  "reference_predictors": {"zero_mm": 82.6, "train_mean_mm": 94.2, "random_mm": 163, "hand_crop_oracle_box_mm": 54.70}
+}

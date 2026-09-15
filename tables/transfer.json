@@ -1,0 +1,54 @@
+{
+ "B2_direct_mono": {
+  "SHOW3D->HOT3D (fold A)": 38.984999507108824,
+  "SHOW3D->SHOW3D (fold A)": 49.57971472294324
+ },
+ "B3_direct_stereo_rays": {
+  "SHOW3D->HOT3D (fold A)": 40.17865172275034,
+  "SHOW3D->SHOW3D (fold A)": 46.15399768066343,
+  "SHOW3D->SHOW3D (fold B)": 35.67977374961011
+ },
+ "B3b_direct_stereo_norays": {
+  "SHOW3D->SHOW3D (fold A)": 47.47019248241331
+ },
+ "FIF_geo_stereo": {
+  "SHOW3D->HOT3D (fold A)": 50.318260492030305,
+  "SHOW3D->SHOW3D (fold A)": 55.10631194532843
+ },
+ "FIF_hybrid_gatefusion": {
+  "SHOW3D->SHOW3D (fold A)": 44.4878874943813
+ },
+ "FIF_hybrid_meanfusion": {
+  "SHOW3D->SHOW3D (fold A)": 48.37996244544764
+ },
+ "FIF_hybrid_mono": {
+  "SHOW3D->SHOW3D (fold A)": 45.18816621843557
+ },
+ "FIF_hybrid_noaux": {
+  "SHOW3D->SHOW3D (fold A)": 45.71129680443046
+ },
+ "FIF_hybrid_nonll": {
+  "SHOW3D->SHOW3D (fold A)": 46.481193940207135
+ },
+ "FIF_hybrid_stereo": {
+  "SHOW3D->HOT3D (fold A)": 43.91425076715942,
+  "SHOW3D->SHOW3D (fold A)": 44.425680440317926,
+  "SHOW3D->SHOW3D (fold B)": 34.07549642759449
+ },
+ "T2_B3": {
+  "HOT3D->SHOW3D": 78.13482947674255,
+  "HOT3D->HOT3D": 42.625325549002156
+ },
+ "T2_FIF": {
+  "HOT3D->SHOW3D": 79.58975222558027,
+  "HOT3D->HOT3D": 43.32169357002505
+ },
+ "T3_B3": {
+  "SHOW3D+HOT3D->HOT3D": 34.54482398785241,
+  "SHOW3D+HOT3D->SHOW3D": 46.195238077717946
+ },
+ "T3_FIF": {
+  "SHOW3D+HOT3D->HOT3D": 36.7065041713896,
+  "SHOW3D+HOT3D->SHOW3D": 46.15986996546661
+ }
+}

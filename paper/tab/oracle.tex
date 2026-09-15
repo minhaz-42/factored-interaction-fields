@@ -1,0 +1,13 @@
+\footnotesize\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Model & Direct alone & Direct head & Geo.\ head & Geo., GT object & Geo., GT joints & Fused & med.\ $w^{\rm geo}$ & $s^{\rm geo}$ saturated \\
+\midrule
+FIF, fold A, seed 0 & 46.15 & 44.55 & 55.11 & 46.46 & 51.35 & \textbf{44.43} & 0.03 & 100\% \\
+FIF, fold A, seed 1 & 45.73 & 43.98 & 56.72 & 45.97 & 50.14 & \textbf{43.82} & 0.03 & 100\% \\
+FIF single view, fold A & 49.58 & 45.06 & 58.00 & 44.67 & 48.79 & \textbf{45.19} & 0.04 & 100\% \\
+FIF, fold B & 35.68 & 34.29 & 41.47 & 35.08 & 43.11 & \textbf{34.08} & 0.13 & 4\% \\
+FIF gate fusion, fold A & 46.15 & 44.86 & 52.58 & 42.69 & 48.27 & \textbf{44.49} & 0.32 & 0\% \\
+FIF, SHOW3D+HOT3D, fold A & 46.20 & 45.99 & 62.38 & 47.63 & 54.78 & \textbf{46.16} & 0.03 & 100\% \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,59 @@
+cache: vit_base_patch16_dinov3_480x384_pca256
+aux: aux_labels_10fps.jsonl
+fold: A
+views:
+- headset0
+- headset1
+mode: hybrid
+fusion: precision
+use_rays: true
+d_model: 384
+heads: 8
+layers: 6
+ff: 1536
+dropout: 0.1
+n_ctrl: 16
+n_verts: 1024
+token_drop: 0.1
+epochs: 10
+batch_size: 32
+lr: 0.0002
+weight_decay: 0.05
+warmup_steps: 300
+clip: 1.0
+tau_start: 400.0
+tau_end: 25.0
+loss_weights:
+  dir: 0.1
+  geo: 0.1
+  joint: 0.02
+  obj: 0.02
+  vis: 0.1
+  pres: 0.1
+  cat: 0.0
+workers: 4
+seed: 0
+train_subjects:
+- ASC023
+- SPI102
+- LWA828
+- YZH016
+- XXI103
+- PCW023
+- MHA016
+- MMO925
+val_subjects:
+- XYZ109
+- LYA722
+train_frames: 37645
+val_frames: 5955
+train_frames_per_source:
+- 37645
+params_trainable: 15066659
+backbone: vit_base_patch16_dinov3.lvd1689m
+image_resolution: 480x384
+device: mps
+platform: macOS-26.6.2-arm64-arm-64bit-Mach-O
+torch: 2.10.0
+optimizer: AdamW
+scheduler: warmup+cosine

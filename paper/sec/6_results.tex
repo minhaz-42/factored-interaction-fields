@@ -1,0 +1,48 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Main comparison}
+\label{sec:main}
+
+\begin{table*}[t]
+\centering\small
+\caption{Held-out-subject results on SHOW3D. Fold A holds out XYZ109 and LYA722 (the organisers' development split), fold B holds out MHA016 and MMO925. ADE in mm (lower is better); accuracies are fractions of joints within the threshold; SD is the surface distance of predicted endpoints to the ground-truth posed object (mm). Where two numbers are given they are seeds 0 and 1. All token models share the frozen DINOv3 ViT-B/16 cache, decoder, optimiser and schedule; the InterField row is the organisers' published result on the identical fold-A split. Recall is 1.0 for every model.}
+\label{tab:main}
+\input{tab/main}
+\end{table*}
+
+\Cref{tab:main} gives the main comparison. On fold A, the direct regressor over frozen tokens already improves substantially on the official ResNet-50 baseline, from 60.47 to 49.58\,mm with one view and to 46.15\,mm with both views and ray encoding; acc@10 rises from 0.150 to 0.227. This is the expected effect of a strong self-supervised encoder and confirms that the consensus challenge architecture is well reproduced at the reduced scale. The second view is worth 3.4\,mm over the single view (49.58 to 46.15) and the ray encoding 1.3\,mm over stereo without it (47.47 to 46.15), both larger than the 0.19 and 0.6\,mm that GOLF reports at its much stronger representation~\cite{zou2026golf}; the geometric cues matter more when the backbone contributes less.
+
+The full factored model reaches 44.43\,mm on fold A against 46.15\,mm for the matched direct regressor, a reduction of 1.72\,mm (3.7\%), and 34.08 against 35.68\,mm on fold B, a reduction of 1.60\,mm (4.5\%). The two folds agree to within 0.12\,mm on the size of the effect although their absolute errors differ by more than 10\,mm, which reflects the difficulty of the held-out subjects rather than the models: on fold A, subject XYZ109 is at 48.7\,mm and LYA722 at 38.9\,mm for the factored model; on fold B MHA016 is at 42.1\,mm and MMO925 at 25.4\,mm. Absolute errors should therefore never be compared across folds; within-fold differences are what carries information. Across two seeds on fold A the direct model gives 46.15 and 45.73\,mm and the factored model 44.43 and 43.82\,mm: the gap of 1.82\,mm between the seed means is three times the largest within-model seed spread (0.60\,mm) and the two ranges do not overlap. With two seeds this is a range, not a variance estimate, and we report it as such.
+
+The secondary metrics move consistently. acc@50 and acc@100 improve on both folds (0.756 to 0.768 and 0.912 to 0.921 on fold A; 0.794 to 0.807 and 0.920 to 0.930 on fold B), the surface distance of predicted endpoints to the true object falls from 33.2 to 31.2\,mm and from 23.6 to 22.8\,mm, and the magnitude error falls from 31.1 to 29.2\,mm. acc@10 does not improve (0.227 to 0.211 on fold A, 0.255 to 0.252 on fold B): the factored model reduces large errors and does not sharpen predictions that are already within a centimetre. The same trade appears in the single-view setting, where \method{} improves on the direct model by 4.4\,mm (49.58 to 45.19), two and a half times the stereo gain, and a single-view \method{} at 45.19\,mm is better than the two-view direct regressor at 46.15\,mm. The geometric supervision helps most where the input is least informative.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{../figures/fig4_qualitative.pdf}
+\caption{Held-out predictions of the direct and the factored model. The four frames lie near the 10th, 37th, 63rd and 90th percentile of the factored model's per-frame error on fold A (top left to bottom right), one object each. Every frame is shown as ground truth (grey vectors), the direct stereo regressor and the factored model (red vectors); skeletons and the posed mesh are ground truth in every panel, light grey marks regions outside the camera image, and the per-frame ADE is printed. In the near-contact grasp of the milk carton both models are within 15\,mm; on the vase and the toy the factored model corrects the direction and length of vectors from fingers that are not touching the object; in the dumbbell frame the right hand is below the image, where the direct model errs by 129\,mm and the factored model by 82\,mm.}
+\label{fig:qual}
+\end{figure*}
+
+\Cref{fig:qual} shows held-out frames sampled across the error distribution. Where the hand grasps the object, both models are accurate and nearly indistinguishable. Where fingers hover near but not on the surface, the direct regressor tends to shorten the vectors towards the hand, whereas the factored model places their endpoints on the object. Where the hand is outside the image, both models fail, but the factored model fails by less. The failure analysis of \cref{sec:failure} examines these regimes in turn.
+
+\subsection{Where the gain comes from}
+\label{sec:strata}
+
+\begin{table*}[t]
+\centering\small
+\caption{Stratified error on fold A for the single-view and stereo direct regressors and their factored counterparts. Strata are defined from the ground truth: field magnitude, joint visibility in the reference view (inside the image and not occluded by the posed object), the fraction of hand joints and object vertices inside the reference image, and joint group. The last block decomposes the endpoint error into its component along the viewing ray through the true endpoint and the lateral remainder, and reports direction, magnitude and surface-distance errors.}
+\label{tab:strata}
+\input{tab/strata}
+\end{table*}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{../figures/fig6_strata_gain.pdf}
+\caption{Where the factored model gains. Bars give ADE(direct) minus ADE(\method{}) in mm per difficulty stratum for four matched pairs: stereo on fold A, stereo on fold B, single view on fold A, and joint SHOW3D+HOT3D training on fold A. (a) By field magnitude the gain grows from the near-contact to the far-field stratum in every SHOW3D-only comparison. (b) The gain is larger for occluded than for visible joints. (c) It is largest by far when the hand is outside the image. The joint-training pair breaks the pattern (\cref{sec:cross}). Sample counts are for fold A.}
+\label{fig:strata}
+\end{figure}
+
+\Cref{tab:strata} and \cref{fig:strata} locate the improvement. In every SHOW3D-only comparison the far-field stratum carries the largest gain, and in two of the three the gain grows monotonically with the magnitude of the target: on fold A stereo, 0.6\,mm for joints within 15\,mm of the object, 1.5\,mm between 15 and 60\,mm and 3.0\,mm beyond 60\,mm; in the single-view setting, 1.9, 2.7 and 8.7\,mm. On fold B the middle stratum is flat (0.2, 0.0 and 4.5\,mm). The gain is larger for joints occluded by the object or outside the image than for visible joints (3.0 against 1.3\,mm on fold A) and largest by far when the hand itself leaves the image, where it reaches 21.1\,mm on fold A, 22.5\,mm on fold B and 19.7\,mm with one view. The far-field stratum contains 32\% of the joints but 67\% of the total error of the direct model; it is where the mean is decided, and it is where the factored model helps most. This is the behaviour the formulation predicts: the geometric route reconstructs the field from two quantities that remain constrained when the direct mapping from pixels to a long vector is not, and the fusion falls back on the direct head when the object is in plain view and the vector is short. The second clause of the falsification criterion is therefore met, and met on two independent subject pairs.
+
+The error components in the last block of \cref{tab:strata} answer the question left open by the challenge reports, namely why a second view helps so little. For every model the lateral component of the endpoint error is larger than the component along the viewing ray, 36.7 against 22.3\,mm for the stereo direct model and 39.8 against 23.4\,mm for its single-view counterpart. Adding the second view reduces the along-ray component by 1.1\,mm and the lateral component by 3.1\,mm. The residual error of these models is therefore not primarily a depth error, which stereo could resolve, but a lateral one, which reflects where along the object surface the network believes the nearest point to be. The factored model reduces both components, by 0.5\,mm along the ray and 1.6\,mm laterally, and lowers the direction error of long vectors from 30.5 to 29.8 degrees. Per joint group the gain is spread across fingertips, distal and intermediate joints (about 2\,mm each) and is smallest at the wrist (0.6\,mm), whose vectors are the longest and least constrained by contact.
