@@ -304,3 +304,6 @@ Tanvir Ahmed, North South University, Dhaka, Bangladesh, tanvir.ahmed32@northsou
 
 ## SUBMITTED (2026-09-15, 12:31)
 Image and Vision Computing, Full Length Article. main.pdf, abstract.pdf, highlights.pdf, graphical_abstract.pdf. Subscription route, no funding, SSRN preprint opted in (posts after desk review). Outstanding: deposit the 3 GB of derived labels, checkpoints and predictions and add the link to the repo README before the preprint goes live.
+
+## Receipt confirmed
+Manuscript number IMAVIS-D-26-04847, confirmation email 2026-09-15 12:37. Track at editorialmanager.com/IMAVIS.

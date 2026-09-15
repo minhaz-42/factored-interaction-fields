@@ -114,7 +114,8 @@ below 301 dpi.
 |---|---|
 | **Journal** | Image and Vision Computing (Elsevier), ISSN 0262-8856 |
 | **Article type** | Full Length Article |
-| **Submitted** | 15 September 2026, 12:31 |
+| **Manuscript number** | IMAVIS-D-26-04847 |
+| **Submitted** | 15 September 2026, 12:31, receipt confirmed 12:37 |
 | **Portal** | https://submit.elsevier.com/IMAVIS |
 | **Title** | Factored Interaction Fields: Learning Joint-Anchored Hand-Object Proximity Through Its Geometric Arguments |
 | **Corresponding author** | Tanvir Ahmed, North South University, Dhaka, Bangladesh |
@@ -127,6 +128,10 @@ access, because a hybrid-journal APC is not payable without funding; five classi
 3D object pose estimation, 3D from multiple views, human-body pose estimation, 3D from a single
 image and 3D point cloud understanding; research data linked to this repository; and **opted in to
 the free SSRN preprint**, which posts once the manuscript clears initial desk review.
+
+**Tracking.** Author login is at https://www.editorialmanager.com/IMAVIS/ . That site carries a
+banner saying not to use it for live submission; the banner refers to submitting, not to tracking.
+A regional editor is assigned before the paper gets its reference number and goes out for review.
 
 **Why this venue.** The work is a controlled measurement of one design decision with an honest
 negative component, not a leaderboard entry. It needs a venue that reviews on rigour rather than on
