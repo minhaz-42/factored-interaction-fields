@@ -1,0 +1,16 @@
+{
+  "format": "jpeg",
+  "fps": 10,
+  "manifest": "show3d/interaction_field/train_manifest_202607.jsonl",
+  "num_frames": 277158,
+  "num_labels": 87366,
+  "num_recordings": 468,
+  "posed_only": false,
+  "quality": 90,
+  "require_object_pose": true,
+  "save_labels": true,
+  "views": [
+    "headset0",
+    "headset1"
+  ]
+}

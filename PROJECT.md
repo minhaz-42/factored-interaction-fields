@@ -162,7 +162,10 @@ Committed here, about 14 MB: the model and training code, one configuration per 
 metrics every table is built from, the run logs, every figure script, the LaTeX source and the built
 manuscript.
 
-Not committed, and why:
+Not committed, and why. As of 16 September 2026 the raw data and the feature cache are no longer on
+the author's machine either: they were deleted to reclaim disk, and `data/aux/manifests/` records
+what was there and how the extraction was parameterised. The artefacts the paper promises were kept.
+
 
 | Artefact | Size | Reason |
 |---|---|---|

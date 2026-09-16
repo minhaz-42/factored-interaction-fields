@@ -103,7 +103,7 @@ All modules written and smoke-tested on real data:
 - `fif/viz.py` and 9 scripts in `scripts/` for pipeline, HOT3D build, experiments,
   tables and figures.
 
-### Data on disk (~85 GB)
+### Data on disk (~85 GB) — DELETED 2026-09-16, see the entry at the end of this file
 
 | Artefact | Size | State |
 |---|---|---|
@@ -319,3 +319,15 @@ Crossref has the record: DOI 10.2139/ssrn.7466725, posted-content/preprint, Else
 2026-09-15 17:17 UTC, 62 references, abstract identical to paper/sec/0_abstract_body.tex. The SSRN
 page itself is behind a Cloudflare challenge, so the hosted PDF was not compared with paper/main.pdf
 (sha256 9932cd54, 20 pages, 4,670,883 bytes). Cite the DOI, not the ssrn.com/abstract= URL.
+
+## Raw data deleted to reclaim disk (2026-09-16)
+`data/show3d` (40 GB), `data/frames` (41 GB) and `data/cache` (23 GB) were deleted. The machine was
+at 87% full; this and a set of caches freed 171 GB. **Nothing promised in the paper was touched:**
+`data/aux` (774 MB of derived labels), the 36 checkpoints and 26 prediction files in `experiments/`
+(2.4 GB) and the object meshes in `third_party/` are all intact, and the deposit of those artefacts
+is still outstanding.
+
+To reproduce anything, re-download SHOW3D through the official dataset API and HOT3D from its
+authors, then re-run the frame extraction and `scripts/cache_features.py` (about 5-6 h on this Mac).
+`data/aux/manifests/` holds the three `extract_info.json` files, so the HOT3D clip selection and the
+frame extraction can be repeated exactly, plus an inventory of what was deleted.
