@@ -116,7 +116,7 @@ below 301 dpi.
 | **Article type** | Full Length Article |
 | **Manuscript number** | IMAVIS-D-26-04847 |
 | **Submitted** | 15 September 2026, 12:31, receipt confirmed 12:37 |
-| **Preprint** | SSRN 7466725, posted 15 September 2026, 23:17 |
+| **Preprint** | SSRN 7466725, posted 15 September 2026, 23:17, DOI 10.2139/ssrn.7466725 |
 | **Portal** | https://submit.elsevier.com/IMAVIS |
 | **Title** | Factored Interaction Fields: Learning Joint-Anchored Hand-Object Proximity Through Its Geometric Arguments |
 | **Corresponding author** | Tanvir Ahmed, North South University, Dhaka, Bangladesh |
@@ -135,6 +135,15 @@ submission was acknowledged. The abstract page is https://ssrn.com/abstract=7466
 page is https://ssrn.com/author=13184493 . What SSRN hosts is the manuscript exactly as submitted,
 `paper/main.pdf`; it is not peer reviewed, and it carries no statement about the journal's editorial
 decision. Support for the preprint itself is at https://www.elsevier.support/ssrn/ .
+
+**Preprint record, verified 16 September 2026.** SSRN registered the DOI
+**10.2139/ssrn.7466725** with Crossref at 17:17 UTC on 15 September, the minute the notification
+was sent. The deposited record is `posted-content` / `preprint`, publisher Elsevier BV, one author,
+62 references, and its abstract is word-for-word `paper/sec/0_abstract_body.tex`. The deposit
+therefore describes the submitted manuscript. The abstract page itself sits behind a Cloudflare
+challenge that refuses every non-browser client, so it was not read here and the hosted PDF was not
+compared byte for byte against `paper/main.pdf` (sha256 9932cd54…, 20 pages, 4,670,883 bytes);
+that check needs a browser. Cite the DOI rather than the `ssrn.com/abstract=` URL.
 
 **Tracking.** Author login is at https://www.editorialmanager.com/IMAVIS/ . That site carries a
 banner saying not to use it for live submission; the banner refers to submitting, not to tracking.

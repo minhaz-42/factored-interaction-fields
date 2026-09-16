@@ -313,3 +313,9 @@ SSRN posted the submitted manuscript: https://ssrn.com/abstract=7466725 (author 
 https://ssrn.com/author=13184493). This is the version sent to the journal, not peer reviewed, and
 says nothing about the editorial decision. The data-availability promise is now public, so the
 deposit of derived labels, checkpoints and predictions is overdue rather than pending.
+
+## Preprint verified (2026-09-16)
+Crossref has the record: DOI 10.2139/ssrn.7466725, posted-content/preprint, Elsevier BV, registered
+2026-09-15 17:17 UTC, 62 references, abstract identical to paper/sec/0_abstract_body.tex. The SSRN
+page itself is behind a Cloudflare challenge, so the hosted PDF was not compared with paper/main.pdf
+(sha256 9932cd54, 20 pages, 4,670,883 bytes). Cite the DOI, not the ssrn.com/abstract= URL.
