@@ -307,3 +307,9 @@ Image and Vision Computing, Full Length Article. main.pdf, abstract.pdf, highlig
 
 ## Receipt confirmed
 Manuscript number IMAVIS-D-26-04847, confirmation email 2026-09-15 12:37. Track at editorialmanager.com/IMAVIS.
+
+## Preprint live (2026-09-15, 23:17)
+SSRN posted the submitted manuscript: https://ssrn.com/abstract=7466725 (author page
+https://ssrn.com/author=13184493). This is the version sent to the journal, not peer reviewed, and
+says nothing about the editorial decision. The data-availability promise is now public, so the
+deposit of derived labels, checkpoints and predictions is overdue rather than pending.

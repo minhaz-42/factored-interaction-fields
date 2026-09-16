@@ -116,6 +116,7 @@ below 301 dpi.
 | **Article type** | Full Length Article |
 | **Manuscript number** | IMAVIS-D-26-04847 |
 | **Submitted** | 15 September 2026, 12:31, receipt confirmed 12:37 |
+| **Preprint** | SSRN 7466725, posted 15 September 2026, 23:17 |
 | **Portal** | https://submit.elsevier.com/IMAVIS |
 | **Title** | Factored Interaction Fields: Learning Joint-Anchored Hand-Object Proximity Through Its Geometric Arguments |
 | **Corresponding author** | Tanvir Ahmed, North South University, Dhaka, Bangladesh |
@@ -128,6 +129,12 @@ access, because a hybrid-journal APC is not payable without funding; five classi
 3D object pose estimation, 3D from multiple views, human-body pose estimation, 3D from a single
 image and 3D point cloud understanding; research data linked to this repository; and **opted in to
 the free SSRN preprint**, which posts once the manuscript clears initial desk review.
+
+**Preprint.** SSRN confirmed posting on 15 September 2026 at 23:17, about eleven hours after the
+submission was acknowledged. The abstract page is https://ssrn.com/abstract=7466725 and the author
+page is https://ssrn.com/author=13184493 . What SSRN hosts is the manuscript exactly as submitted,
+`paper/main.pdf`; it is not peer reviewed, and it carries no statement about the journal's editorial
+decision. Support for the preprint itself is at https://www.elsevier.support/ssrn/ .
 
 **Tracking.** Author login is at https://www.editorialmanager.com/IMAVIS/ . That site carries a
 banner saying not to use it for live submission; the banner refers to submitting, not to tracking.
@@ -161,10 +168,10 @@ Not committed, and why:
 ## 7. Outstanding
 
 1. **Deposit the 3 GB of derived labels, checkpoints and predictions** and add the link to
-   `README.md`. The abstract, conclusion and Data availability statement all promise them. This has
-   a deadline: the SSRN preprint makes that promise public as soon as desk review clears. Mendeley
-   Data is Elsevier's own repository, is free, issues a DOI and appears in the submission system's
-   repository list, so it links to the article more cleanly than Zenodo.
+   `README.md`. The abstract, conclusion and Data availability statement all promise them, and that
+   promise is now public: the SSRN preprint is live, so the deadline has arrived rather than being
+   ahead. Mendeley Data is Elsevier's own repository, is free, issues a DOI and appears in the
+   submission system's repository list, so it links to the article more cleanly than Zenodo.
 2. **Sign in to the journal account** from the confirmation email, which is required to track the
    submission and file revisions.
 3. **Consider arXiv cs.CV.** SSRN gives the DOI and the timestamp, but computer vision researchers

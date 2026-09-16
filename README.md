@@ -2,6 +2,7 @@
 
 Code, configurations and analysis for **"Factored Interaction Fields: Learning Joint-Anchored
 Hand-Object Proximity Through Its Geometric Arguments"**, submitted to *Image and Vision Computing*.
+Preprint: <https://ssrn.com/abstract=7466725>.
 
 The SHOW3D interaction field assigns to each of the 21 joints of a hand the 3-D vector to the
 nearest point of the manipulated object. Published solutions regress those 126 numbers directly.
@@ -87,4 +88,18 @@ redistributed here.
 
 ## Citation
 
-A citation will be added once the paper has an assigned venue and DOI.
+The submitted manuscript is on SSRN as a preprint while it is under review:
+<https://ssrn.com/abstract=7466725>.
+
+```bibtex
+@misc{ahmed2026fif,
+  title  = {Factored Interaction Fields: Learning Joint-Anchored Hand-Object
+            Proximity Through Its Geometric Arguments},
+  author = {Ahmed, Tanvir},
+  year   = {2026},
+  note   = {Preprint, SSRN 7466725},
+  url    = {https://ssrn.com/abstract=7466725}
+}
+```
+
+This entry will be replaced once the paper has an assigned venue and DOI.
